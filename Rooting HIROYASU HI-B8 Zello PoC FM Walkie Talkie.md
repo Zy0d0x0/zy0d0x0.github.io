@@ -42,7 +42,7 @@ Its compact design and combination of communication tools make it a practical ch
 # MTK Client Installation
 
 Note: most of this guide taken from https://github.com/bkerler/mtkclient?tab=readme-ov-file#windows with a few minor
-changes such as i had problems with installing git modules due to a long path problem in windows 10, which was resolved
+changes such as i had problems with installing python modules due to a long path problem in windows 10, which was resolved
 using a registry edit.
 
 Install Winfsp (for fuse)
