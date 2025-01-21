@@ -298,7 +298,7 @@ to the file manager then find the a app called app-release.apk and tap on it to 
 Once the app is installed we need to open it and select the boot.bin file we have uploaded prior.
 This will then start the patching process as displayed in the below screenshot.
 
-[Install Complete Image Image Here]
+![](install_complete.jpg)
 
 Now that Magisk has patched the boot file we need to download it back to the host computer
 and move it back into the mtk client directory as boot.patched for command simplicity.
