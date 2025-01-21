@@ -720,13 +720,8 @@ m3_h:/ # reboot
 
 # Resources
 
-* Video That Gives Pointers.
-
-   This video gives a coervage until uploading the boot rom and unlocking the device as the commands have changed
-   in newer version of mtk client https://www.youtube.com/watch?v=9AE_HPis8pE
-
-* Mtk Client https://github.com/bkerler/mtkclient
-
+* A [video](https://www.youtube.com/watch?v=9AE_HPis8pE) that provides some Pointers in rooting mtk devices.
+* [Mtk Client](https://github.com/bkerler/mtkclient)
 
 # Credits
 
