@@ -22,8 +22,6 @@ Index:
 
 # About Radio 
 
-HIROYASU HI-B8 WIFI 2G 3G 4G LTE Zello PoC FM Walkie Talkie 2GB+16GB 2.4” Touch Screen Android 9.0 Phone Call GPS Voice Record
-
 The HIROYASU HI-B8 is a multi-functional device that integrates features typically found in smartphones, walkie-talkies, GPS trackers, and FM radios. Designed to support both professional and recreational communication needs, 
 it combines robust connectivity options with a compact and durable design.
 
