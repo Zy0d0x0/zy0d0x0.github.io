@@ -3,7 +3,7 @@
 Index:
 
 * [About Radio](#About-Radio)
-* [Installation](#Installation)
+* [Installation](#MTK-Client-Installation)
 * [Dumping the Boot](#Dumping-the-Boot)
 * [Installing Magisk](#Installing-Magisk)
 * [Erasing Userdata & Metadata](#Erasing-Userdata-&-Metadata)
