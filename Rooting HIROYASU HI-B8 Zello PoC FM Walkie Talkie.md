@@ -622,7 +622,7 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 Once the radio has booted up as normal you will need to reinstall magisk apk and then start it up, This may cause the radio to reboot into recovery mode. 
 If this happends just hold the orange emergency button on the top 
 
-[Revcovery Mode Image Here]
+![](recovery.jpg)
 
 The radio will then take a bit of time to reboot. Once it has started up as normal again run a adb shell command from the host
 computer and if you try "su" command you should notice permissions denied warning. This is fine the magisk app is currently blocking access to open up the app and on the bottom navigation bar select super user and then enable it, Now within adb you should be able to use "su" and check your permissions with "id" command.
