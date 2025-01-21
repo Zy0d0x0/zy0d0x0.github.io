@@ -1,7 +1,7 @@
 # Rooting HIROYASU HI-B8 Zello PoC FM Walkie Talkie
 
 
-![](https://ae01.alicdn.com/kf/Sd6a933249e9f4db19d389b1c0b9a9b28p.jpg)
+![](logo.png)
 
 
 Index:
