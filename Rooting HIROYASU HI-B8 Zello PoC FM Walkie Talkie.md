@@ -10,7 +10,8 @@ Index:
 * [Writing the Custom Patched Bootrom](#Writing-the-Custom-Patched-Bootrom) 
 * [Unlocking The Bootloader](#Unlocking-The-Bootloader)
 * [Enabling Root Access](#Enabling-Root-Access)
-* [Create Custom Boot Animation & Muting Boot Sounds (Optional)](#Create-Custom-Boot-Animation-&-Muting-Boot-Sounds-(Optional)) 
+* [Create Custom Boot Animation (Optional)](#Create-Custom-Boot-Animation-(Optional))
+* [Overwrite The Boot & Shudown Animations (Optional)](Overwrite-The-Boot-&-Shudown-Animations-(Optional))
 * [Overwrite The Boot / Shudown Audio (Optional)](#Overwrite-The-Boot-/-Shudown-Audio-(Optional)) 
 * [Resources](#Resources)
 
@@ -631,7 +632,7 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 m3_h:/ #
 ```
 
-# Create Custom Boot Animation & Muting Boot Sounds (Optional) 
+# Create Custom Boot Animation (Optional) 
 
 [Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
 
@@ -707,7 +708,7 @@ m3_h:/ #
 ```
 
 
-Overwrite The Boot & Shudown Animations
+# Overwrite The Boot & Shudown Animations (Optional) 
 
 ```
 m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/bootanimation.zip" >> /data/adb/post-fs-data.d/change_bootanimation.sh
@@ -731,8 +732,6 @@ m3_h:/ # reboot
 ```
 
 # Resources
-
-Resources:
 
 * Video That Gives Pointers.
 
