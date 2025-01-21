@@ -717,6 +717,7 @@ m3_h:/ # reboot
 ```
 
 Example Of youtube short of the replaced boot animation and audio files.
+
 [![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
 
 
