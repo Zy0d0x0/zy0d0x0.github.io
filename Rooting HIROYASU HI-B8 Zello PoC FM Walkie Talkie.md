@@ -726,3 +726,8 @@ m3_h:/ # reboot
    in newer version of mtk client https://www.youtube.com/watch?v=9AE_HPis8pE
 
 * Mtk Client https://github.com/bkerler/mtkclient
+
+
+# Credits
+
+* Thanks to Jeremy Turner M1CVZ for ordering the radio allowing M7SYN to perform the rooting process. 
