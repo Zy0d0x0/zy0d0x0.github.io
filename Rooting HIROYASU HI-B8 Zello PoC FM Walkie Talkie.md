@@ -698,7 +698,7 @@ m3_h:/ #
 ```
 
 
-Set the correct the file permissions for the new file.
+# Overwrite The Boot & Shudown Animations (Optional) 
 
 ```
 m3_h:/ # chown root:root /data/adb/bootanimation.zip
@@ -706,15 +706,6 @@ m3_h:/ # chmod 0644 /data/adb/bootanimation.zip
 m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/bootanimation.zip
 chcon '/data/adb/bootanimation.zip' to u:object_r:system_file:s0
 
-m3_h:/ # ls -lZ /data/adb/bootanimation.zip
--rw-r--r-- 1 root root u:object_r:system_file:s0 431239 2025-01-20 04:32 /data/adb/bootanimation.zip
-m3_h:/ #
-```
-
-
-# Overwrite The Boot & Shudown Animations (Optional) 
-
-```
 m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/bootanimation.zip" >> /data/adb/post-fs-data.d/change_bootanimation.sh
 m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/shutanimation.zip" >> /data/adb/post-fs-data.d/change_bootanimation.sh
 m3_h:/ # chmod 755 /data/adb/post-fs-data.d/change_bootanimation.sh
