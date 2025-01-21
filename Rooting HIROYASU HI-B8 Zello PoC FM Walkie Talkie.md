@@ -716,6 +716,10 @@ m3_h:/ # chmod 755 /data/adb/post-fs-data.d/change_bootanimation.sh
 m3_h:/ # reboot
 ```
 
+Example Of youtube short of the replaced boot animation and audio files.
+[![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
+
+
 # Resources
 
 * A [video](https://www.youtube.com/watch?v=9AE_HPis8pE) that provides some Pointers in rooting mtk devices.
