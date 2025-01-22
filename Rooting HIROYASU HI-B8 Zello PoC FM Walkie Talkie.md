@@ -721,6 +721,17 @@ Example Youtube short of the replaced boot animation and audio files.
 [![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
 
 
+
+# Internals
+
+To remove the shell there is two security screw at the bottom of the radio behind the battery a small allen key will 
+actully work to unscrew them. then there is a couple of clips holding the cover on using a set of tweasers it was possible
+to pull the cover off the back revealing the internals.
+
+![](internals.jpg)
+
+
+
 # Resources
 
 * A [video](https://www.youtube.com/watch?v=9AE_HPis8pE) that provides some Pointers in rooting mtk devices.
