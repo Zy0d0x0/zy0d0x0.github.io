@@ -724,9 +724,9 @@ Example Youtube short of the replaced boot animation and audio files.
 
 # Internals
 
-To remove the shell there is two security screw at the bottom of the radio behind the battery a small allen key will 
-actully work to unscrew them. then there is a couple of clips holding the cover on using a set of tweasers it was possible
-to pull the cover off the back revealing the internals.
+Removing the shell there are two security screws at the bottom of the radio behind the battery. Using a small allen key will 
+loosten the screws if you do not have the correct tool. 
+Finally There is a couple of clips holding the cover on using a set of tweasers it was possible to pull the cover off the back revealing the internals.
 
 ![](internals.jpg)
 
