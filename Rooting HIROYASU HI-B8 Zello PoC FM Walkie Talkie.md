@@ -16,8 +16,10 @@ Index:
 * [Enabling Root Access](#Enabling-Root-Access)
 * [Create Custom Boot Animation (Optional)](#Create-Custom-Boot-Animation-(Optional))
 * [Overwrite The Boot & Shudown Animations (Optional)](Overwrite-The-Boot-&-Shudown-Animations-(Optional))
-* [Overwrite The Boot / Shudown Audio (Optional)](#Overwrite-The-Boot-/-Shudown-Audio-(Optional)) 
+* [Overwrite The Boot / Shudown Audio (Optional)](#Overwrite-The-Boot-/-Shudown-Audio-(Optional))
+* [Internals](#Internals)
 * [Resources](#Resources)
+* [Credits](#Credits)
 
 
 # About Radio 
