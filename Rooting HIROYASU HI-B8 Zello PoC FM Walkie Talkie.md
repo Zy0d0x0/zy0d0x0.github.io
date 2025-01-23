@@ -17,6 +17,7 @@ Index:
 * [Create Custom Boot Animation (Optional)](#Create-Custom-Boot-Animation-(Optional))
 * [Overwrite The Boot & Shudown Animations (Optional)](Overwrite-The-Boot-&-Shudown-Animations-(Optional))
 * [Overwrite The Boot / Shudown Audio (Optional)](#Overwrite-The-Boot-/-Shudown-Audio-(Optional))
+* [Replacing The Boot Splash images (Optional)](Replacing-The-Boot-Splash-images-(Optional))
 * [Internals](#Internals)
 * [Resources](#Resources)
 * [Credits](#Credits)
@@ -724,7 +725,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
-# Replacing The Boot Splash images (Optional).
+# Replacing The Boot Splash images (Optional)
 
 Download LogoBuilder_v1.6 from [here](https://xdaforums.com/t/changing-boot-logo-logo-bin-program.1953726/)
 Extract the contents and modification needs to be performed to the sizes.txt file so that the files will
