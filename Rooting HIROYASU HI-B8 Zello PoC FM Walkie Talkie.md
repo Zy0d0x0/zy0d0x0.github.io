@@ -727,6 +727,109 @@ Example Youtube short of the replaced boot animation and audio files.
 
 # Replacing The Boot Splash images (Optional)
 
+Download the logo.bin file from the radio with mtk client and using the special button combinations used in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
+
+```
+C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py r logo logo.bin
+MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
+
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...........
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+...Port - Device detected :)
+Preloader -     CPU:                    MT6739/MT6731/MT8765()
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xb4
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x699
+Preloader - Target config:              0x0
+Preloader -     SBC enabled:            False
+Preloader -     SLA enabled:            False
+Preloader -     DAA enabled:            False
+Preloader -     SWJTAG enabled:         False
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          False
+Preloader -     Mem write auth:         False
+Preloader -     Cmd 0xC8 blocked:       False
+Preloader - Get Target info
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xcb00
+Preloader -     SW Ver:                 0x2
+Preloader - ME_ID:                      8C9061A2190D6F2C543FF335D358DBB6
+Preloader - SOC_ID:                     4A13B658562E8689A847DCA687CFE3C339F3C1866DABBF304FFCD5EEC4CF47D4
+DaHandler - Device is unprotected.
+DaHandler - Device is in Preloader-Mode.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - EMMC FWVer:      0x0
+DAXFlash - EMMC ID:         QE63MB
+DAXFlash - EMMC CID:        150100514536334d4203aba6f2a5954b
+DAXFlash - EMMC Boot1 Size: 0x400000
+DAXFlash - EMMC Boot2 Size: 0x400000
+DAXFlash - EMMC GP1 Size:   0x0
+DAXFlash - EMMC GP2 Size:   0x0
+DAXFlash - EMMC GP3 Size:   0x0
+DAXFlash - EMMC GP4 Size:   0x0
+DAXFlash - EMMC RPMB Size:  0x400000
+DAXFlash - EMMC USER Size:  0x3a3e00000
+DAXFlash - HW-CODE         : 0x699
+DAXFlash - HWSUB-CODE      : 0x8A00
+DAXFlash - HW-VERSION      : 0xCB00
+DAXFlash - SW-VERSION      : 0x2
+DAXFlash - CHIP-EVOLUTION  : 0x0
+DAXFlash - DA-VERSION      : 1.0
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added
+DaHandler - Requesting available partitions ....
+DaHandler - Dumping partition "logo"
+Progress: |██████████| 100.0% Read (0x4000/0x4000, ) 12.82 MB/s MB/s
+DaHandler - Dumped sector 602368 with sector count 16384 as logo.bin.
+
+C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
+```
+
 Download LogoBuilder_v1.6 from [here](https://xdaforums.com/t/changing-boot-logo-logo-bin-program.1953726/)
 Extract the contents and modification needs to be performed to the sizes.txt file so that the files will
 be loaded with the correct screen resolulation read for repacking.
