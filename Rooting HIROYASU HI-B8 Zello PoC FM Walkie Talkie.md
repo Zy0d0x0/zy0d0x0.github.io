@@ -976,7 +976,7 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 ```
 
-Remove the battery once completed and power on the radio. The changes should 
+Remove the battery once completed and  put it back into the radios body then power on the radio. The changes should 
 now be displayed.
 
 ![](newbootsplash.png)
