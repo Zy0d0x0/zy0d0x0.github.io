@@ -746,10 +746,10 @@ Replace the contents of sizes.txt with the following resoultions.
 
 
 How to use:
-1) Click "Create project".
-2) Select your original logo.bin file and new project folder
-3) Edit project images as you wish.
-4) Click "Make" (new logo.bin and update.zip for recovery will be created)              
+* Click "Create project".
+* Select your original logo.bin file and new project folder
+* Edit project images as you wish.
+* Click "Make" (new logo.bin and update.zip for recovery will be created)              
 
 
 ![](LoadedBootImages.png)
