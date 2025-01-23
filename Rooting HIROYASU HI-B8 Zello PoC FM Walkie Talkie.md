@@ -18,10 +18,10 @@ Index:
 * [Writing the Custom Patched Bootrom](#Writing-the-Custom-Patched-Bootrom) 
 * [Unlocking The Bootloader](#Unlocking-The-Bootloader)
 * [Enabling Root Access](#Enabling-Root-Access)
-* [Create Custom Boot Animation (Optional)](#Create-Custom-Boot-Animation-(Optional))
-* [Overwrite The Boot & Shudown Animations (Optional)](Overwrite-The-Boot-&-Shudown-Animations-(Optional))
-* [Overwrite The Boot / Shudown Audio (Optional)](#Overwrite-The-Boot-/-Shudown-Audio-(Optional))
-* [Replacing The Boot Splash images (Optional)](Replacing-The-Boot-Splash-images-(Optional))
+* [Create Custom Boot Animation (Optional)](#Create-Custom-Boot-Animation)
+* [Overwrite The Boot & Shudown Animations (Optional)](Overwrite-The-Boot-&-Shudown-Animations)
+* [Overwrite The Boot / Shudown Audio (Optional)](#Overwrite-The-Boot-&-Shudown-Audio)
+* [Replacing The Boot Splash images (Optional)](Replacing-The-Boot-Splash-images)
 * [Internals](#Internals)
 * [Resources](#Resources)
 * [Credits](#Credits)
@@ -633,7 +633,7 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 m3_h:/ #
 ```
 
-# Create Custom Boot Animation (Optional) 
+# Create Custom Boot Animation 
 
 [Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
 
@@ -695,7 +695,7 @@ m3_h:/ #
 ```
 
 
-# Overwrite The Boot & Shudown Animations (Optional) 
+# Overwrite The Boot & Shutdown Animations
 
 ```
 m3_h:/ # chown root:root /data/adb/bootanimation.zip
@@ -710,7 +710,7 @@ m3_h:/ # reboot
 ```
 
 
-# Overwrite The Boot / Shudown Audio (Optional) 
+# Overwrite The Boot and Shutdown Audio 
 
 ```
 m3_h:/ # touch /data/adb/shutaudio.mp3
@@ -729,7 +729,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
-# Replacing The Boot Splash images (Optional)
+# Replacing The Boot Splash images
 
 Download the logo.bin file from the radio with mtk client and using the special button combinations used in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
 
