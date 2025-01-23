@@ -19,7 +19,7 @@ Index:
 * [Unlocking The Bootloader](#Unlocking-The-Bootloader)
 * [Enabling Root Access](#Enabling-Root-Access)
 * [Create Custom Boot Animation](#Create-Custom-Boot-Animation)
-* [Overwrite The Boot & Shutdown Animations](Overwrite-The-Boot-&-Shutdown-Animations)
+* [Overwrite The Boot & Shutdown Animations](#Overwrite-The-Boot-&-Shutdown-Animations)
 * [Overwrite The Boot & Shutdown Audio](#Overwrite-The-Boot-&-Shutdown-Audio)
 * [Replace The Boot Splash images](#Replace-The-Boot-Splash-images)
 * [Internals](#Internals)
