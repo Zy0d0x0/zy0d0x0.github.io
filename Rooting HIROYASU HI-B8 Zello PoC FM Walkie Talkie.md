@@ -21,7 +21,7 @@ Index:
 * [Create Custom Boot Animation](#Create-Custom-Boot-Animation)
 * [Overwrite The Boot & Shutdown Animations](Overwrite-The-Boot-&-Shutdown-Animations)
 * [Overwrite The Boot & Shutdown Audio](#Overwrite-The-Boot-&-Shutdown-Audio)
-* [Replacing The Boot Splash images](Replacing-The-Boot-Splash-images)
+* [Replace The Boot Splash images](#Replace-The-Boot-Splash-images)
 * [Internals](#Internals)
 * [Resources](#Resources)
 * [Credits](#Credits)
@@ -729,7 +729,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
-# Replacing The Boot Splash images
+# Replace The Boot Splash images
 
 Download the logo.bin file from the radio with mtk client and using the special button combinations used in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
 
