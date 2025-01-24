@@ -4,7 +4,7 @@
 ![](logo.png)
 
 
-Please Note This Is A On Going Proccess So Things May Change.
+Please Note This Is A On Going Proccess So Things May Change, The radio will also boot much slower whth the changes made from this guide at the current point.
 
 
 
