@@ -1005,4 +1005,6 @@ Finally There is a couple of clips holding the cover on using a set of tweasers 
 
 # Credits
 
+* All the people who contributed and created MTK Client.
+* The Creator of LogoBuilder
 * Thanks to Jeremy Turner M1CVZ for ordering the radio allowing M7SYN to perform the rooting process. 
