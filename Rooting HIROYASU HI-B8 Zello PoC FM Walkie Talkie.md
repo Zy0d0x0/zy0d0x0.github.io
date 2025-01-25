@@ -703,9 +703,9 @@ m3_h:/ # chmod 0644 /data/adb/bootanimation.zip
 m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/bootanimation.zip
 chcon '/data/adb/bootanimation.zip' to u:object_r:system_file:s0
 
-m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/bootanimation.zip" >> /data/adb/post-fs-data.d/change_bootanimation.sh
-m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/shutanimation.zip" >> /data/adb/post-fs-data.d/change_bootanimation.sh
-m3_h:/ # chmod 755 /data/adb/post-fs-data.d/change_bootanimation.sh
+m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/bootanimation.zip" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/shutanimation.zip" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # chmod 755 /data/adb/service.d/change_bootanimation.sh
 m3_h:/ # reboot
 ```
 
@@ -717,9 +717,9 @@ m3_h:/ # touch /data/adb/shutaudio.mp3
 m3_h:/ # chmod 0644 /data/adb/shutaudio.mp3
 m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/shutaudio.mp3
 chcon '/data/adb/shutaudio.mp3' to u:object_r:system_file:s0
-m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/shutaudio.mp3" >> /data/adb/post-fs-data.d/change_bootanimation.sh
-m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/bootaudio.mp3" >> /data/adb/post-fs-data.d/change_bootanimation.sh
-m3_h:/ # chmod 755 /data/adb/post-fs-data.d/change_bootanimation.sh
+m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/shutaudio.mp3" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/bootaudio.mp3" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # chmod 755 /data/adb/service.d/change_bootanimation.sh
 m3_h:/ # reboot
 ```
 
