@@ -645,6 +645,25 @@ m3_h:/data/adb/post-fs-data.d # chmod +x disabled_boot_animations.sh
 m3_h:/data/adb/post-fs-data.d # reboot
 ```
 
+The boot still will be slower then normal due to the orange status in the bootloader. This adds on 5 seconds.
+
+* Green state means the device is locked or verified, the Keystore is verified with an OEM key, and the boot image was verified by the Keystore
+* Yellow state means that an alternate keystore was used to verify the boot image
+* Orange state indicates that the device is unlocked, so no verification was done.
+* Red state means that a device in the locked or verified state had a boot image that did not verify.
+
+You can verify this your self.
+
+```
+m3_h:/ $ su
+m3_h:/ # getprop |grep orange
+[ro.boot.verifiedbootstate]: [orange]
+m3_h:/ #
+```
+
+
+
+
 
 
 # Create Custom Boot Animation 
