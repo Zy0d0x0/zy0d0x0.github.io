@@ -1021,7 +1021,7 @@ Finally There is a couple of clips holding the cover on using a set of tweasers 
 
 # Resources
 
-* A [video](https://www.youtube.com/watch?v=9AE_HPis8pE) that provides some Pointers in rooting mtk devices.
+* [Video](https://www.youtube.com/watch?v=9AE_HPis8pE) that provides some Pointers in rooting mtk devices.
 * [Mtk Client](https://github.com/bkerler/mtkclient)
 
 # Credits
