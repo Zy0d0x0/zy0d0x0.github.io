@@ -649,6 +649,8 @@ m3_h:/data/adb/post-fs-data.d # reboot
 
 # Create Custom Boot Animation 
 
+if you have opted to create a custom boot animation, please note this may add even more time to the boot process.
+
 [Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
 
 ```
