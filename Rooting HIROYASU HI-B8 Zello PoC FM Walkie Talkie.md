@@ -729,6 +729,22 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
+
+
+# Disable Boot Animation
+
+It is also possible to just disable the boot animation allowing just the boot splash images to become the boot image.
+
+```
+m3_h:/data/adb/post-fs-data.d # echo "resetprop debug.sf.nobootanimation 1" > disabled_boot_animations.sh
+m3_h:/data/adb/post-fs-data.d # chmod +x disabled_boot_animations.sh
+m3_h:/data/adb/post-fs-data.d # reboot
+```
+
+
+
+
+
 # Replace The Boot Splash images
 
 Download the logo.bin file from the radio with mtk client and using the special button combinations used in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
