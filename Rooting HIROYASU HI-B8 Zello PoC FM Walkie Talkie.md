@@ -633,6 +633,20 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 m3_h:/ #
 ```
 
+
+# Disable Boot Animation
+
+It is also possible to just disable the boot animation allowing just the boot splash images to become the boot image.
+This will also prevent the audio from playing but you will loose the shut down animation.
+
+```
+m3_h:/data/adb/post-fs-data.d # echo "resetprop debug.sf.nobootanimation 1" > disabled_boot_animations.sh
+m3_h:/data/adb/post-fs-data.d # chmod +x disabled_boot_animations.sh
+m3_h:/data/adb/post-fs-data.d # reboot
+```
+
+
+
 # Create Custom Boot Animation 
 
 [Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
@@ -695,6 +709,7 @@ m3_h:/ #
 ```
 
 
+
 # Overwrite The Boot & Shutdown Animations
 
 ```
@@ -712,6 +727,10 @@ m3_h:/ # reboot
 
 # Overwrite The Boot and Shutdown Audio 
 
+Please note if you replace the audio with a custom animation this will work using the `touch` command creating a blank file. If
+you decide to keep the original boot animation you will need to replace it with a real audio file or the radio does not fully boot,
+although its still accessible via adb to revert changes. 
+
 ```
 m3_h:/ # touch /data/adb/shutaudio.mp3
 m3_h:/ # chmod 0644 /data/adb/shutaudio.mp3
@@ -726,22 +745,6 @@ m3_h:/ # reboot
 Example Youtube short of the replaced boot animation and audio files.
 
 [![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
-
-
-
-
-
-# Disable Boot Animation
-
-It is also possible to just disable the boot animation allowing just the boot splash images to become the boot image.
-
-```
-m3_h:/data/adb/post-fs-data.d # echo "resetprop debug.sf.nobootanimation 1" > disabled_boot_animations.sh
-m3_h:/data/adb/post-fs-data.d # chmod +x disabled_boot_animations.sh
-m3_h:/data/adb/post-fs-data.d # reboot
-```
-
-
 
 
 
