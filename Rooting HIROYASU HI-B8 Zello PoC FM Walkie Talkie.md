@@ -706,7 +706,7 @@ Become a super user and then move the copied animation to /data/adb/
 ```
 C:\Users\Gamer\adb-fastboot\platform-tools>adb shell
 m3_h:/ $ su
-m3_h:/ # mv /sdcard/Download/ /data/adb/
+m3_h:/ # mv /sdcard/Download/bootanimation.zip /data/adb/
 m3_h:/ #
 ```
 
