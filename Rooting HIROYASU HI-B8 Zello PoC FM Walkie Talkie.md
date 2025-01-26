@@ -243,7 +243,9 @@ When the bootloader been succesfully downloaded to the local computer we next ne
 to continue the proccess of patching the bootloader. 
 
 Please note this cannot be completed from a factory device until you have navigated to the phone dial pad,
-then entering the follow sequence ```*#13579*#``` upon completed it should flash up at the bottom of the dashbaord "apps can be installed". 
+then entering the follow sequence ```*#13579*#``` upon completed it should flash up at the bottom as displayed in the below image. 
+
+![](apps_install.png)
 
 If you have done this prior you may have just reverted the settings for this, which is not a problem as it works like a swich by using the 
 key codes you can enable or disable app installation access. Although if this process is not completed Installing Magisk Will Fail.
@@ -1070,6 +1072,14 @@ Like the engineering mode navigate to the dialpad and enter the below codes. Thi
 
  ```*#13579*#```
 
+
+Enabled:
+
+![](apps_install.png)
+
+Disabled:
+
+![](apps_not_allowed.png)
 
 
 
