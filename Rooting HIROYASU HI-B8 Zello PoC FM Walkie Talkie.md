@@ -1021,6 +1021,7 @@ now be displayed.
 
 # Additional Commands
 
+## Boot Into Recovery Mode
 
 Booting into recovery mode was original disabled and the radio would not do anything other then crash the display.
 When the bootloader is unlocked with the MTK client this allowed for recovery mode.
@@ -1034,6 +1035,20 @@ Then wait for the radio to reboot. you can now use the knob next to the antenna 
 through the menu's to select a item just hold down the orange emergency button on the top of the radio for a couple
 of seconds. Please not while in this mode the radio is also still avaiblie via adb.
 
+
+
+## MTK Engineer Mode
+
+Using the following command in the dial pad will enable some hidden features.
+Swipe left of right for other settings use at your own risk.
+
+```*#*#3646633#*#*```
+
+## Enable / Disable App Installaion
+
+This will either enable of diable app installation on the radio. 
+
+ ```*#13579*#```
 
 
 
