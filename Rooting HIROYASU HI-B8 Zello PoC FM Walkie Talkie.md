@@ -513,7 +513,8 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 # Unlocking The Bootloader
 
-The last stage of using MTK Client is to unlock the bootloader from here onwards we no longer have to go through the special button procceses.
+The last stage of using MTK Client is to unlock the bootloader which allows for magisk to gain its root access.
+it is no longer required to use MTK client and its key combinations from here onwards, unless you later want to change the boot splash screen
 
 
 ```
@@ -660,108 +661,6 @@ m3_h:/ # getprop |grep orange
 [ro.boot.verifiedbootstate]: [orange]
 m3_h:/ #
 ```
-
-
-# Create Custom Boot Animation ( Optional Slower Booting times. )
-
-if you have opted to create a custom boot animation, please note this may add even more time to the boot process.
-
-[Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
-
-```
-pip3 install -r requirements.txt
-```
-
-By Default this script seems to fail with its own example. I found by commenting out the lines 80 and 81 in gifextract.py the code then 
-works with the example gif.
-
-
-```
-   # If the GIF uses local colour tables, each frame will have its
-   # own palette.
-   # If not, we need to apply the global palette to the new frame.
-   # if not im.getpalette():
-   #   im.putpalette(p)
-```
-
-A Note From Downloading the original boot animations and opening up the zip there is a file called desc.txt
-this has the resultion and FPS used for crafting the commandline up.
-
-
-```
-240 320 10
-p 1 0 part0
-p 0 0 part1
-
-```
-
-Create a example boot animation for testing.
-
-```
-C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master>python3 create_bootanimation.py C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\example\example.gif 240 320 10 C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\ -zip
-C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\create_bootanimation.py:160: DeprecationWarning: LANCZOS is deprecated and will be removed in Pillow 10 (2023-07-01). Use Resampling.LANCZOS instead.
-  original_img = original_img.resize((t_width, height_size), Image.LANCZOS)
-Done
-
-C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master>
-```
-
-
-Copy the created animation over to the radio into the /sdcard/Download directory
-
-```
-C:\Users\Gamer\adb-fastboot\platform-tools>adb push bootanimation.zip /sdcard/Download/
-bootanimation.zip: 1 file pushed, 0 skipped. 31.3 MB/s (431239 bytes in 0.013s)
-
-C:\Users\Gamer\adb-fastboot\platform-tools>
-```
-
-Become a super user and then move the copied animation to /data/adb/
-
-```
-C:\Users\Gamer\adb-fastboot\platform-tools>adb shell
-m3_h:/ $ su
-m3_h:/ # mv /sdcard/Download/bootanimation.zip /data/adb/
-m3_h:/ #
-```
-
-
-
-# Overwrite The Boot & Shutdown Animations
-
-```
-m3_h:/ # chown root:root /data/adb/bootanimation.zip
-m3_h:/ # chmod 0644 /data/adb/bootanimation.zip
-m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/bootanimation.zip
-chcon '/data/adb/bootanimation.zip' to u:object_r:system_file:s0
-
-m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/bootanimation.zip" >> /data/adb/service.d/change_bootanimation.sh
-m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/shutanimation.zip" >> /data/adb/service.d/change_bootanimation.sh
-m3_h:/ # chmod 755 /data/adb/service.d/change_bootanimation.sh
-m3_h:/ # reboot
-```
-
-
-# Overwrite The Boot and Shutdown Audio 
-
-Please note if you replace the audio with a custom animation this will work using the `touch` command creating a blank file. If
-you decide to keep the original boot animation you will need to replace it with a real audio file or the radio does not fully boot,
-although its still accessible via adb to revert changes. 
-
-```
-m3_h:/ # touch /data/adb/shutaudio.mp3
-m3_h:/ # chmod 0644 /data/adb/shutaudio.mp3
-m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/shutaudio.mp3
-chcon '/data/adb/shutaudio.mp3' to u:object_r:system_file:s0
-m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/shutaudio.mp3" >> /data/adb/service.d/change_bootanimation.sh
-m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/bootaudio.mp3" >> /data/adb/service.d/change_bootanimation.sh
-m3_h:/ # chmod 755 /data/adb/service.d/change_bootanimation.sh
-m3_h:/ # reboot
-```
-
-Example Youtube short of the replaced boot animation and audio files.
-
-[![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
 
 
 
@@ -1016,6 +915,110 @@ Remove the battery once completed and  put it back into the radios body then pow
 now be displayed.
 
 ![](newbootsplash.png)
+
+
+
+# Create Custom Boot Animation ( Optional Slower Booting times. )
+
+if you have opted to create a custom boot animation, please note this may add even more time to the boot process.
+
+[Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
+
+```
+pip3 install -r requirements.txt
+```
+
+By Default this script seems to fail with its own example. I found by commenting out the lines 80 and 81 in gifextract.py the code then 
+works with the example gif.
+
+
+```
+   # If the GIF uses local colour tables, each frame will have its
+   # own palette.
+   # If not, we need to apply the global palette to the new frame.
+   # if not im.getpalette():
+   #   im.putpalette(p)
+```
+
+A Note From Downloading the original boot animations and opening up the zip there is a file called desc.txt
+this has the resultion and FPS used for crafting the commandline up.
+
+
+```
+240 320 10
+p 1 0 part0
+p 0 0 part1
+
+```
+
+## Create a example boot animation for testing.
+
+```
+C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master>python3 create_bootanimation.py C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\example\example.gif 240 320 10 C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\ -zip
+C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\create_bootanimation.py:160: DeprecationWarning: LANCZOS is deprecated and will be removed in Pillow 10 (2023-07-01). Use Resampling.LANCZOS instead.
+  original_img = original_img.resize((t_width, height_size), Image.LANCZOS)
+Done
+
+C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master>
+```
+
+
+Copy the created animation over to the radio into the /sdcard/Download directory
+
+```
+C:\Users\Gamer\adb-fastboot\platform-tools>adb push bootanimation.zip /sdcard/Download/
+bootanimation.zip: 1 file pushed, 0 skipped. 31.3 MB/s (431239 bytes in 0.013s)
+
+C:\Users\Gamer\adb-fastboot\platform-tools>
+```
+
+Become a super user and then move the copied animation to /data/adb/
+
+```
+C:\Users\Gamer\adb-fastboot\platform-tools>adb shell
+m3_h:/ $ su
+m3_h:/ # mv /sdcard/Download/bootanimation.zip /data/adb/
+m3_h:/ #
+```
+
+
+
+## Overwrite The Boot & Shutdown Animations
+
+```
+m3_h:/ # chown root:root /data/adb/bootanimation.zip
+m3_h:/ # chmod 0644 /data/adb/bootanimation.zip
+m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/bootanimation.zip
+chcon '/data/adb/bootanimation.zip' to u:object_r:system_file:s0
+
+m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/bootanimation.zip" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # echo "mount -o bind /data/adb/bootanimation.zip   /system/media/shutanimation.zip" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # chmod 755 /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # reboot
+```
+
+
+## Overwrite The Boot and Shutdown Audio 
+
+Please note if you replace the audio with a custom animation this will work using the `touch` command creating a blank file. If
+you decide to keep the original boot animation you will need to replace it with a real audio file or the radio does not fully boot,
+although its still accessible via adb to revert changes. 
+
+```
+m3_h:/ # touch /data/adb/shutaudio.mp3
+m3_h:/ # chmod 0644 /data/adb/shutaudio.mp3
+m3_h:/ # chcon -v u:object_r:system_file:s0 /data/adb/shutaudio.mp3
+chcon '/data/adb/shutaudio.mp3' to u:object_r:system_file:s0
+m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/shutaudio.mp3" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # echo "mount -o bind /data/adb/shutaudio.mp3   /system/media/bootaudio.mp3" >> /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # chmod 755 /data/adb/service.d/change_bootanimation.sh
+m3_h:/ # reboot
+```
+
+Example Youtube short of the replaced boot animation and audio files.
+
+[![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
+
 
 
 
