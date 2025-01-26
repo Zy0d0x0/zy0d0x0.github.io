@@ -1058,6 +1058,18 @@ Like the engineering mode navigate to the dialpad and enter the below codes. Thi
 
 
 
+## Bug reports
+
+Additional information can be found [here](https://developer.android.com/studio/debug/bug-report#bugreport) on bug reporting format
+
+```
+C:\Users\Gamer\adb-fastboot\platform-tools>adb bugreport bugreport
+/data/user_de/0/com.android.shell/files/bugreports/bugrepo...file pulled, 0 skipped. 8.8 MB/s (1226237 bytes in 0.132s)
+Bug report copied to bugreport.zip
+
+C:\Users\Gamer\adb-fastboot\platform-tools>
+```
+
 
 # Internals
 
