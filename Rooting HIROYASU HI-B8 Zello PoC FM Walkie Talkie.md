@@ -1047,7 +1047,7 @@ of seconds. Please not while in this mode the radio is also still avaiblie via a
 Using the following command in the dial pad will enable some hidden features.
 Swipe left of right for other settings use at your own risk.
 
-```*#*#3646633#*#*```
+Dial: ```*#*#3646633#*#*```
 
 
 ![](engineering.png)
@@ -1059,7 +1059,7 @@ Swipe left of right for other settings use at your own risk.
 
 This has been renamed testing it seems but on most MTK phones should be Info.
 
-```*#*#4636#*#*```
+Dial ```*#*#4636#*#*```
 
 
 
@@ -1070,7 +1070,7 @@ This has been renamed testing it seems but on most MTK phones should be Info.
 
 Like the engineering mode navigate to the dialpad and enter the below codes. This will either enable of diable app installation on the radio. 
 
- ```*#13579*#```
+Dial ```*#13579*#```
 
 
 Enabled:
