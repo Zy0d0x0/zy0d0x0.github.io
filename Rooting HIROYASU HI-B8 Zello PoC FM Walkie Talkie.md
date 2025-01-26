@@ -1052,6 +1052,18 @@ Swipe left of right for other settings use at your own risk.
 
 
 
+
+## Radio Info 
+
+This has been renamed testing it seems but on most MTK phones should be Info.
+
+```*#*#4636#*#*```
+
+
+
+![](testing_info.png)
+
+
 ## Enable / Disable App Installaion
 
 Like the engineering mode navigate to the dialpad and enter the below codes. This will either enable of diable app installation on the radio. 
