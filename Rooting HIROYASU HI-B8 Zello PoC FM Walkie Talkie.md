@@ -248,7 +248,7 @@ then entering the follow sequence ```*#13579*#``` upon completed it should flash
 If you have done this prior you may have just reverted the settings for this, which is not a problem as it works like a swich by using the 
 key codes you can enable or disable app installation access. Although if this process is not completed Installing Magisk Will Fail.
 
-Upon completion of unlocking the app installation procces we then need to download the latest Magisk [APK file](https://github.com/topjohnwu/Magisk/releases/latest)
+Upon completion of unlocking the app installation procces we then need to download the patched Magisk [APK file](https://github.com/topjohnwu/Magisk/releases/tag/v28.1)
 
 Once Magisk app is downloaded a few more settings settings need to take place before proceeding the rest of the steps such as enabling OEM unlocking and USB Debugging. This will allow us to then send files and perform other tasks via commandline "adb" on the radio.
 
