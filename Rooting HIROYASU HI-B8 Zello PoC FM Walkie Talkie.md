@@ -259,7 +259,7 @@ Enable Developer Mode:
 
    * Navigate Settings/About Followed By phone/Version, Tap 7x on build number
 
-OEM Unlock (Possibly Not Needed)
+OEM Unlock (Possibly Not Needed as mtk client forces this. on the to be tested list)
 
    * Navigate To Settings/Additional settings/Developer options, enable "OEM unlock"
 
