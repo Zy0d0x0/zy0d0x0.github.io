@@ -1036,9 +1036,13 @@ C:\Users\Gamer\adb-fastboot\platform-tools>adb reboot recovery
 C:\Users\Gamer\adb-fastboot\platform-tools>
 ```
 
+![](recovery.jpg)
+
 Then wait for the radio to reboot. you can now use the knob next to the antenna to the navigate up and down 
 through the menu's to select a item just hold down the orange emergency button on the top of the radio for a couple
 of seconds. Please not while in this mode the radio is also still avaiblie via adb.
+
+
 
 
 
