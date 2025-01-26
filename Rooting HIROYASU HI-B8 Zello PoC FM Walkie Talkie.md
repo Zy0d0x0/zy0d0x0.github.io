@@ -1046,7 +1046,7 @@ Swipe left of right for other settings use at your own risk.
 
 ## Enable / Disable App Installaion
 
-This will either enable of diable app installation on the radio. 
+Like the engineering mode navigate to the dialpad and enter the below codes. This will either enable of diable app installation on the radio. 
 
  ```*#13579*#```
 
