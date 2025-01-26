@@ -1038,9 +1038,12 @@ Finally There is a couple of clips holding the cover on using a set of tweasers 
 
 * [Video](https://www.youtube.com/watch?v=9AE_HPis8pE) that provides some Pointers in rooting mtk devices.
 * [Mtk Client](https://github.com/bkerler/mtkclient)
+* [LogoBuilder](https://xdaforums.com/t/changing-boot-logo-logo-bin-program.1953726/)
+* [Magisk](https://github.com/topjohnwu/Magisk)
 
 # Credits
 
 * All the people who contributed and created MTK Client.
 * The Creator of LogoBuilder
+* The Creator of Magisk
 * Thanks to Jeremy Turner M1CVZ for ordering the radio allowing M7SYN to perform the rooting process. 
