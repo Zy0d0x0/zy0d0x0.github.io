@@ -44,6 +44,33 @@ or other critical audio data.
 The device is engineered to be durable, supporting use in challenging environments such as construction sites, outdoor expeditions, or industrial settings. 
 Its compact design and combination of communication tools make it a practical choice for users requiring a versatile communication device.
 
+OS: Android 9.0
+
+Hardware Specifications:
+
+* CPU: MTK6739 Quad-cord 1.3Ghz 64bits ARM
+* Memory: 2GB RAM+16GB ROM
+* LCD Size: 2.4”TFT Touch
+* Bluetooth/WIFI: Support
+* GPS/BD:Support
+* Speaker: 2W output
+* Battery: 4000mAh
+* Dimension: 160*55*30mm
+* Device Weight: 200g (battery and antenna installed)
+* Working Environment: -20°c ~85°c
+* Working Voltage:3.7V
+* Receive Sensitivity:-106dbm
+* Max.Transmit Power: 23-25dBm @all up bits
+* Waterproof Level: IP54
+* Earphone Jack: 3.5mm single plug
+* USB Interface: Type-c
+
+Cellular Network Specifications:
+
+* 2G GSM850/900/1800/1900MHz
+* 3G WCDMA: B1/B2/B5/B8
+* 4GFDD: B1/B3/B5/B7/B8/B20/B28A/B28B
+* 4GTDD:B38/B39/B40/B41
 
 
 
