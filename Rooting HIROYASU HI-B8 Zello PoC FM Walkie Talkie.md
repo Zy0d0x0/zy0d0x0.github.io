@@ -99,23 +99,24 @@ Download the latest MTK Client and [install](https://github.com/bkerler/mtkclien
 
 Any other compiling errors try the following: 
 
-Download and Install the Build Tools:
-   Go to the Visual Studio Build [Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools) page.
+* Download and Install the Build Tools:
+   *  Go to the Visual Studio Build [Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools) page.
    Download the installer and run it.
 
-Select the Necessary Workloads:
-   In the installer, select the "Desktop development with C++" workload.
+* Select the Necessary Workloads:
+  * In the installer, select the "Desktop development with C++" workload.
    Ensure that the "MSVC v142 - VS 2019 C++ x64/x86 build tools" (or later) component is selected.
    You can also check "Windows 10 SDK" if it’s not already selected. - Unselect Windows 11 Not Required
 
-Complete the Installation:
+* Complete the Installation:
 
-   Click on the "Install" button to begin the installation.
+   * Click on the "Install" button to begin the installation.
    Follow the prompts to complete the installation.
    Restart your computer if required.
 
 
-download usbdk installer from [here](https://github.com/daynix/UsbDk/releases/) and install it. This should 
+
+Finally download usbdk installer from [here](https://github.com/daynix/UsbDk/releases/) and install it. This should 
 be it for requirements.
 
 
