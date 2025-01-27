@@ -2,8 +2,6 @@
 
 Please Note This Is A On Going Proccess So Things May Change, The radio will also boot much slower with the changes made from this guide at the current point.
 
-Index: ( To Be Updated ) as of 26-01-2025
-
 * TOC
 {:toc}
 
