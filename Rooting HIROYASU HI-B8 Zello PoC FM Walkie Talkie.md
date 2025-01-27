@@ -57,7 +57,7 @@ Cellular Network Specifications:
 
 # Required software:
 
-## adb Installation
+## ADB Installation
 
 Download the Android SDK Platform Tools ZIP file for [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 
