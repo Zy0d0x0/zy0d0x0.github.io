@@ -52,6 +52,8 @@ Its compact design and combination of communication tools make it a practical ch
 
 Download the Android SDK Platform Tools ZIP file for [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 
+[Add Data Here...]
+
 
 # MTK Client Installation
 
