@@ -4,21 +4,8 @@ Please Note This Is A On Going Proccess So Things May Change, The radio will als
 
 Index: ( To Be Updated ) as of 26-01-2025
 
-* [About Radio](#About-Radio)
-* [Installation](#MTK-Client-Installation)
-* [Dumping the Boot](#Dumping-the-Boot)
-* [Installing Magisk](#Installing-Magisk)
-* [Erasing Userdata & Metadata](#Erasing-Userdata-&-Metadata)
-* [Writing the Custom Patched Bootrom](#Writing-the-Custom-Patched-Bootrom) 
-* [Unlocking The Bootloader](#Unlocking-The-Bootloader)
-* [Enabling Root Access](#Enabling-Root-Access)
-* [Create Custom Boot Animation](#Create-Custom-Boot-Animation)
-* [Overwrite The Boot & Shutdown Animations](#Overwrite-The-Boot--&--Shutdown-Animations)
-* [Overwrite The Boot & Shutdown Audio](#Overwrite-The-Boot--&--Shutdown-Audio)
-* [Replace The Boot Splash images](#Replace-The-Boot-Splash-images)
-* [Internals](#Internals)
-* [Resources](#Resources)
-* [Credits](#Credits)
+* TOC
+{:toc}
 
 
 # About Radio 
