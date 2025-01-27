@@ -941,7 +941,7 @@ now be displayed.
 
 
 
-# Create Custom Boot Animation ( Optional Slower Booting times. )
+# Create Custom Boot Animation ( Optional Slower Booting Times )
 
 if you have opted to create a custom boot animation, please note this may add even more time to the boot process.
 
