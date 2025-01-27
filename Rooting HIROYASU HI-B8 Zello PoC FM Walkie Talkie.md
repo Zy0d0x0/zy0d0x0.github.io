@@ -1,6 +1,14 @@
 ![](logo.png)
 
-Please Note This Is A On Going Proccess So Things May Change, The radio will also boot much slower with the changes made from this guide at the current point.
+Please Note This Is A On Going Proccess So Things May Change, The radio will also boot much slower with the changes made from this guide at the current point due to the orange status in the bootloader. 
+
+This adds on 5 seconds.
+
+* Green state means the device is locked or verified, the Keystore is verified with an OEM key, and the boot image was verified by the Keystore
+* Yellow state means that an alternate keystore was used to verify the boot image
+* Orange state indicates that the device is unlocked, so no verification was done.
+* Red state means that a device in the locked or verified state had a boot image that did not verify.
+
 
 * TOC
 {:toc}
