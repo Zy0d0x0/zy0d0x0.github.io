@@ -654,9 +654,10 @@ It is also possible to just disable the boot animation allowing just the boot sp
 This will also prevent the audio from playing but you will loose the shut down animation.
 
 ```
-m3_h:/data/adb/post-fs-data.d # echo "resetprop debug.sf.nobootanimation 1" > disabled_boot_animations.sh
-m3_h:/data/adb/post-fs-data.d # chmod +x disabled_boot_animations.sh
-m3_h:/data/adb/post-fs-data.d # reboot
+m3_h:/ $ su
+m3_h:/ # echo "resetprop debug.sf.nobootanimation 1" > /data/adb/post-fs-data.d/disabled_boot_animations.sh
+m3_h:/ # chmod +x /data/adb/post-fs-data.d/disabled_boot_animations.sh
+m3_h:/ # reboot
 ```
 
 The boot still will be slower then normal due to the orange status in the bootloader. This adds on 5 seconds.
