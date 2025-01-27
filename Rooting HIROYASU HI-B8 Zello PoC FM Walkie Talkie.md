@@ -44,6 +44,15 @@ or other critical audio data.
 The device is engineered to be durable, supporting use in challenging environments such as construction sites, outdoor expeditions, or industrial settings. 
 Its compact design and combination of communication tools make it a practical choice for users requiring a versatile communication device.
 
+
+
+
+
+# adb Installation
+
+Download the Android SDK Platform Tools ZIP file for [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+
+
 # MTK Client Installation
 
 Note: most of this guide taken from https://github.com/bkerler/mtkclient?tab=readme-ov-file#windows with a few minor
