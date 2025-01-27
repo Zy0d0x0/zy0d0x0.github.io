@@ -84,7 +84,7 @@ Download the Android SDK Platform Tools ZIP file for [Windows](https://dl.google
 
 # MTK Client Installation
 
-Note: most of this guide taken from https://github.com/bkerler/mtkclient?tab=readme-ov-file#windows with a few minor
+Note: most of this guide taken from [here](https://github.com/bkerler/mtkclient?tab=readme-ov-file#windows) with a few minor
 changes such as i had problems with installing python modules due to a long path problem in windows 10, which was resolved
 using a registry edit.
 
