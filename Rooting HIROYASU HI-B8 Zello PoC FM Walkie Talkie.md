@@ -1117,7 +1117,7 @@ Disabled:
 
 
 
-## Bug reports
+## Obtaining Bug reports
 
 Additional information can be found [here](https://developer.android.com/studio/debug/bug-report#bugreport) on bug reporting format
 
