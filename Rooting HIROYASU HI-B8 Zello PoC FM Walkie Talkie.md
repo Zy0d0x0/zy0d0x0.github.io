@@ -75,7 +75,7 @@ The path used in this guide is ```C:\Users\Gamer\adb-fastboot\platform-tools\```
 ## MTK Client Installation
 
 Note: most of this guide taken from [here](https://github.com/bkerler/mtkclient?tab=readme-ov-file#windows) with a few minor
-changes such as i had problems with installing python modules due to a long path problem in windows 10, which was resolved
+changes, such as i had problems with installing python modules due to a long path problem in windows 10, which was resolved
 using a registry edit.
 
 Install Winfsp (for fuse)
@@ -114,7 +114,7 @@ Any other compiling errors try the following:
 * Select the Necessary Workloads:
   * In the installer, select the "Desktop development with C++" workload.
    Ensure that the "MSVC v142 - VS 2019 C++ x64/x86 build tools" (or later) component is selected.
-   You can also check "Windows 10 SDK" if it’s not already selected. - Unselect Windows 11 Not Required
+   You can also check "Windows 10 SDK" if it’s not already selected. - Unselect Windows 11 as it's Not Required
 
 * Complete the Installation:
 
@@ -125,7 +125,7 @@ Any other compiling errors try the following:
 
 
 Finally download usbdk installer from [here](https://github.com/daynix/UsbDk/releases/) and install it. This should 
-be it for requirements.
+be all the necessary requirements to get started completed.
 
 
 
@@ -135,7 +135,7 @@ As explained by the intructions on the original README that comes with Mtk Clien
 the boot loader this can be done with the following commands and also displays the output from the targeted device.
 
 
-Please Note: In the example the instructions produce the following text:
+Please Note: In the example the instructions contain the following text:
 
 
 ```
@@ -150,7 +150,7 @@ If it is already connected and on, hold power for 10 seconds to reset.
 ```
 
 
-In this case its not fully true we need to perform the following steps:
+This is not entirely accurate, we need to perform the following steps:
 
 * Power Off The Radio With A USB Cabled Left Plugged Into the radio but not the laptop end.
 Remove The Battery. 
@@ -272,16 +272,16 @@ When the bootloader been succesfully downloaded to the local computer we next ne
 to continue the proccess of patching the bootloader. 
 
 Please note this cannot be completed from a factory device until you have navigated to the phone dial pad,
-then entering the follow sequence ```*#13579*#``` upon completed it should flash up at the bottom as displayed in the below image. 
+then entering the follow sequence ```*#13579*#``` upon completion it should flash up at the bottom as displayed in the image below. 
 
 ![](apps_install.png)
 
-If you have done this prior you may have just reverted the settings for this, which is not a problem as it works like a swich by using the 
+If you have done this prior you may have just reverted the settings for this, which is not a problem as it works like a switch by using the 
 key codes you can enable or disable app installation access. Although if this process is not completed Installing Magisk Will Fail.
 
 Upon completion of unlocking the app installation procces we then need to download the patched Magisk [APK file](https://github.com/topjohnwu/Magisk/releases/tag/v28.1)
 
-Once Magisk app is downloaded a few more settings settings need to take place before proceeding the rest of the steps such as enabling OEM unlocking and USB Debugging. This will allow us to then send files and perform other tasks via commandline "adb" on the radio.
+Once Magisk app is downloaded a few more settings settings need to be set before continuing with the rest of the steps, such as enabling OEM unlocking and USB Debugging. When installed Magisk will allow us to send files to the radio and perform other tasks via commandline "adb" on the radio.
 
 
 This can be be achived by proceeding with the following on the radio its self.
@@ -299,7 +299,7 @@ USB Debugging:
    * Navigate To Settings/Additional settings/Developer options, enable USB Debugging"
 
 
-Upon completion of the settings changes required for installing Masgisk and acess to the device over USB its
+Upon completion of the settings changes required for installing Masgisk and access to the device over USB. Its
 now possible to remotly install the apk file following the below commands.
 
 
@@ -311,17 +311,17 @@ adb install app-release.apk
 
 if not already done so accept certificate prompt on the radios screen to allow adb connection.
 
-Next we need to Upload boot file that was downloaded form the radio back to the radio in the following directory /sdcard/Download
-This can again be done with the adb.
+Next we need to Upload boot file that was downloaded from the radio, back to the radio in the following directory /sdcard/Download
+This again, can be done with the adb.
 
 
 ```
 adb push boot.img /sdcard/Download
 ```
 
-Up on completion of the upload to the radio. we now need to 
+Up on completion of the upload to the radio. We now need to 
 pick up the device and Start magisk app and navigate 
-to the file manager then find the a app called app-release.apk and tap on it to Install. 
+to the file manager then find the app called app-release.apk and tap on it to Install. 
 
 Once the app is installed we need to open it and select the boot.bin file we have uploaded prior.
 This will then start the patching process as displayed in the below screenshot.
@@ -341,7 +341,7 @@ mv [displayed magisk patched boot filename here] boot.patched
 # Erase Userdata & Metadata 
 
 Note: This will remove all apps that are not default to the rom so if you installed additional 
-apps you will loose them so ensure you have them backedup.
+apps you will loose them so ensure you have them backed-up.
 
 ```
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py e userdata,metadata
@@ -545,7 +545,7 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 # Unlocking The Bootloader
 
 The last stage of using MTK Client is to unlock the bootloader which allows for magisk to gain its root access.
-it is no longer required to use MTK client and its key combinations from here onwards, unless you later want to change the boot splash screen
+It is no longer required to use MTK client and its key combinations from here onwards, unless you later want to change the boot splash screen
 
 
 ```
@@ -649,12 +649,12 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 # Enabling Root Access
 
 Once the radio has booted up as normal you will need to reinstall magisk apk and then start it up, This may cause the radio to reboot into recovery mode. 
-If this happends just hold the orange emergency button on the top 
+If this happens just hold the orange emergency button on the top 
 
 ![](recovery.jpg)
 
 The radio will then take a bit of time to reboot. Once it has started up as normal again run a adb shell command from the host
-computer and if you try "su" command you should notice permissions denied warning. This is fine the magisk app is currently blocking access to open up the app and on the bottom navigation bar select super user and then enable it, Now within adb you should be able to use "su" and check your permissions with "id" command.
+computer and if you try "su" command you should notice permissions denied warning. This is fine, the magisk app is currently blocking access. Open up the app and on the bottom navigation bar select super user and then enable it, now within adb you should be able to use "su" and check your permissions with "id" command.
 
 
 ```
@@ -669,7 +669,7 @@ m3_h:/ #
 # Disable Boot Animation
 
 It is also possible to just disable the boot animation allowing just the boot splash images to become the boot image.
-This will also prevent the audio from playing but you will loose the shut down animation.
+This will also prevent the audio from playing and you will loose the shut down animation.
 
 ```
 m3_h:/ $ su
@@ -698,7 +698,7 @@ m3_h:/ #
 
 # Replace The Boot Splash images
 
-Download the logo.bin file from the radio with mtk client and using the special button combinations used in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
+Download the logo.bin file from the radio with mtk client and using the special button combinations used priviously in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
 
 ```
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py r logo logo.bin
@@ -837,9 +837,8 @@ overitten or you will still see parts of the old image.
 
 
 
-To Replace the logo.bin file in the phone MTK client is required again and using the special button 
-combinations used in this guide it is possible to overite the original logo.bin with the custom 
-generated one.
+To Replace the logo.bin file in the phone MTK client is required again. Using the special button 
+combinations again, it is possible to overite the original logo.bin with the custom generated one.
 
 
 ```
@@ -943,18 +942,18 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 ```
 
-Remove the battery once completed and  put it back into the radios body then power on the radio. The changes should 
+Remove the battery once completed and put it back into the radios body then power on the radio. The changes should 
 now be displayed.
 
 ![](newbootsplash.png)
 
 
 
-# Create Custom Boot Animation ( Optional Slower Booting Times )
+# Create Custom Boot Animation ( Optional - Causes Slower Booting Times )
 
-if you have opted to create a custom boot animation, please note this may add even more time to the boot process.
+If you have opted to create a custom boot animation, please note this may add even more time to the boot process.
 
-[Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, The install the tools requirements.
+[Download](https://github.com/iamantony/create_android_bootanimation/archive/refs/heads/master.zip) and unzip, then navigate into its path with command prompt, then install the tools requirements.
 
 ```
 pip3 install -r requirements.txt
@@ -1058,7 +1057,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 ## Boot Into Recovery Mode
 
-Booting into recovery mode was original disabled and the radio would not do anything other then crash the display.
+Booting into recovery mode was originally disabled and the radio would not do anything other than crash the display.
 When the bootloader is unlocked with the MTK client this allowed for recovery mode.
 
 ```
@@ -1070,7 +1069,7 @@ C:\Users\Gamer\adb-fastboot\platform-tools>
 
 Then wait for the radio to reboot. you can now use the knob next to the antenna to the navigate up and down 
 through the menu's to select a item just hold down the orange emergency button on the top of the radio for a couple
-of seconds. Please not while in this mode the radio is also still avaiblie via adb.
+of seconds. Please note while in this mode the radio is also still avaiblie via adb.
 
 
 
@@ -1079,7 +1078,7 @@ of seconds. Please not while in this mode the radio is also still avaiblie via a
 ## MTK Engineer Mode
 
 Using the following command in the dial pad will enable some hidden features.
-Swipe left of right for other settings use at your own risk.
+Swipe left of right for other settings, use at your own risk.
 
 Dial: 
 ```
@@ -1094,7 +1093,7 @@ Dial:
 
 ## Radio Info 
 
-This has been renamed testing it seems but on most MTK phones should be Info.
+This has been renamed  to 'testing' it seems but on most MTK phones it should be 'Info'.
 
 Dial:
 ```
@@ -1108,7 +1107,7 @@ Dial:
 
 ## Enable / Disable App Installaion
 
-Like the engineering mode navigate to the dialpad and enter the below codes. This will either enable of diable app installation on the radio. 
+Like the engineering mode, navigate to the dialpad and enter the below codes. This will either enable of diable app installation on the radio. 
 
 Dial: 
 ```
@@ -1143,7 +1142,7 @@ C:\Users\Gamer\adb-fastboot\platform-tools>
 
 Removing the shell there are two security screws at the bottom of the radio behind the battery. Using a small allen key will 
 loosten the screws if you do not have the correct tool. 
-Finally There is a couple of clips holding the cover on using a set of tweasers it was possible to pull the cover off the back revealing the internals.
+Finally, there are a couple of clips holding the cover on, using a set of tweasers it was possible to pull the cover off the back revealing the internals.
 
 ![](internals.jpg)
 
@@ -1162,3 +1161,4 @@ Finally There is a couple of clips holding the cover on using a set of tweasers 
 * The Creator of LogoBuilder
 * The Creator of Magisk
 * Thanks to Jeremy Turner M1CVZ for ordering the radio allowing M7SYN to perform the rooting process. 
+* Ben Brown
