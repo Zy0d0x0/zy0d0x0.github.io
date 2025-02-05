@@ -1,3 +1,7 @@
+# Rooting HIROYASU HI-B8 Zello PoC FM Walkie Talkie
+Gaining Root Permissions on the HIROYASU HI-B8 Zello PoC FM Walkie Talkie. To disable loud boot animation sounds & more.
+
+
 ![](logo.png)
 
 Please Note This Is A On Going Proccess So Things May Change, The radio will also boot much slower with the changes made from this guide at the current point due to the Orange status in the bootloader. 
