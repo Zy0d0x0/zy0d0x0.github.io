@@ -1165,4 +1165,4 @@ Finally, there are a couple of clips holding the cover on, using a set of twease
 * The Creator of LogoBuilder
 * The Creator of Magisk
 * Thanks to Jeremy Turner M1CVZ for ordering the radio allowing M7SYN to perform the rooting process. 
-* Ben Brown
+* Editing & proof-reading done by Ben Brown
