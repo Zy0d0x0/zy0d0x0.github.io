@@ -57,6 +57,7 @@ Cellular Network Specifications:
 * 4GFDD: B1/B3/B5/B7/B8/B20/B28A/B28B
 * 4GTDD:B38/B39/B40/B41
 
+Finally No Offical website for the radio so far it can only be found via chinese market spaces.
 
 
 # Required software:
