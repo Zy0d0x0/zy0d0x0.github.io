@@ -1161,11 +1161,11 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
+# Possibly No Root Access Required - In Current Testing Phase
 
+## Hard Remove Boot Sounds & Animations
 
-# Hard Remove Boot Sounds & Animations ( Possibly No Root Access Required - In Current Testing Phase )
-
-## Dump The Filesystem
+### Dump The Filesystem
 
 Using MTKClient it is also possible to dump the file system allowing for mounting and editing using a linux operating system. 
 But first we need to dump the radios root filesystem directory known as ```/``` in this case.
@@ -1263,7 +1263,7 @@ DaHandler - Dumped sector 1294336 with sector count 2506752 as system-backup.img
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ```
 
-## Edit The Filesystem
+### Edit The Filesystem
 
 With a Linux computer system or Virtual Machine its possible to mount the root filesystem that was backed up and make changes. 
 In the below example we was using a kali virtual machine inside of virtual box.
@@ -1481,7 +1481,7 @@ Finally for the linux side of things, Unmount the Filesystem
 ```                                                                                                                                                                                                                                        
 
 
-## Upload Edited Filesystem
+### Upload Edited Filesystem
 
 Once the filesystem has been edited the last part of the process is to just upload it back to the radio.
 Once completed remove the battery and usb cable, Reconnect the battery and start up your radio with no sounds or animation.
