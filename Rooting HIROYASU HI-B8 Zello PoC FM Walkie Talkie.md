@@ -1584,7 +1584,7 @@ reboot
 ```
 
 
-# Additional Commands
+# Additional Commands & Modes
 
 ## Boot Into Recovery Mode
 
