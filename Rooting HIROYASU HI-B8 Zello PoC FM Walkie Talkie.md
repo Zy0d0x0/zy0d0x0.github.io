@@ -774,7 +774,7 @@ m3_h:/ #
 ```
 
 
-# Disable Boot Animation
+# Soft Disable Boot Animation
 
 It is also possible to just disable the boot animation allowing just the boot splash images to become the boot image.
 This will also prevent the audio from playing and you will loose the shut down animation.
@@ -1122,7 +1122,7 @@ m3_h:/ #
 
 
 
-## Overwrite The Boot & Shutdown Animations
+## Soft Overwrite The Boot & Shutdown Animations
 
 ```
 m3_h:/ # chown root:root /data/adb/bootanimation.zip
@@ -1137,7 +1137,7 @@ m3_h:/ # reboot
 ```
 
 
-## Overwrite The Boot and Shutdown Audio 
+## Soft Overwrite The Boot and Shutdown Audio 
 
 Please note if you replace the audio with a custom animation this will work using the `touch` command creating a blank file. If
 you decide to keep the original boot animation you will need to replace it with a real audio file or the radio does not fully boot,
@@ -1157,6 +1157,424 @@ m3_h:/ # reboot
 Example Youtube short of the replaced boot animation and audio files.
 
 [![Example Of Replaced Boot Animation](https://img.youtube.com/vi/dpLyKiHIITM/0.jpg)](https://youtube.com/shorts/dpLyKiHIITM)
+
+
+
+
+
+# Hard Remove Boot Sounds & Animations ( Possibly No Root Access Required - In Current Testing Phase )
+
+## Dump The Filesystem
+
+Using MTKClient it is also possible to dump the file system allowing for mounting and editing using a linux operating system. 
+But first we need to dump the radios root filesystem directory known as ```/``` in this case.
+
+
+```
+C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py r system system-backup.img
+MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
+
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile to brom mode
+
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+Port - Device detected :)
+Preloader -     CPU:                    MT6739/MT6731/MT8765()
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xb4
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x699
+Preloader - Target config:              0x0
+Preloader -     SBC enabled:            False
+Preloader -     SLA enabled:            False
+Preloader -     DAA enabled:            False
+Preloader -     SWJTAG enabled:         False
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          False
+Preloader -     Mem write auth:         False
+Preloader -     Cmd 0xC8 blocked:       False
+Preloader - Get Target info
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xcb00
+Preloader -     SW Ver:                 0x2
+Preloader - ME_ID:                      8C9061A2190D6F2C543FF335D358DBB6
+Preloader - SOC_ID:                     4A13B658562E8689A847DCA687CFE3C339F3C1866DABBF304FFCD5EEC4CF47D4
+DaHandler - Device is unprotected.
+DaHandler - Device is in Preloader-Mode.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - EMMC FWVer:      0x0
+DAXFlash - EMMC ID:         QE63MB
+DAXFlash - EMMC CID:        150100514536334d4203aba6f2a5954b
+DAXFlash - EMMC Boot1 Size: 0x400000
+DAXFlash - EMMC Boot2 Size: 0x400000
+DAXFlash - EMMC GP1 Size:   0x0
+DAXFlash - EMMC GP2 Size:   0x0
+DAXFlash - EMMC GP3 Size:   0x0
+DAXFlash - EMMC GP4 Size:   0x0
+DAXFlash - EMMC RPMB Size:  0x400000
+DAXFlash - EMMC USER Size:  0x3a3e00000
+DAXFlash - HW-CODE         : 0x699
+DAXFlash - HWSUB-CODE      : 0x8A00
+DAXFlash - HW-VERSION      : 0xCB00
+DAXFlash - SW-VERSION      : 0x2
+DAXFlash - CHIP-EVOLUTION  : 0x0
+DAXFlash - DA-VERSION      : 1.0
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added
+DaHandler - Requesting available partitions ....
+DaHandler - Dumping partition "system"
+Progress: |██████████| 100.0% Read (0x264000/0x264000, ) 15.77 MB/s06 MB/sB/s
+DaHandler - Dumped sector 1294336 with sector count 2506752 as system-backup.img.
+
+C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
+```
+
+## Edit The Filesystem
+
+With a Linux computer system or Virtual Machine its possible to mount the root filesystem that was backed up and make changes. 
+In the below example we was using a kali virtual machine inside of virtual box.
+We also mapped a temp share to are Desktop where we had the mtkclient directory which the backup of the ```system.img``` was saved. 
+Please note we also made a copy of this file as it will be edited when you mount and any miss haps could result in a broken filesystem. 
+If you have any problem please remeber you can always restore the device with the backup created at the start of the project.
+
+Create a folder to mount the file system into:
+
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo mkdir /mnt/android
+[sudo] password for kali: 
+```
+
+Navigate to where the ```system.img``` backup was saved. In this example was a share between a windows host and a kali Linux Virtual 
+Machine mapped to Desktop, This results in a path in kali linux of ```/media/sf_Desktop/``` we then needed to nagivate to the 
+directory which stored the downloaded ```system.img``` file:
+
+```
+┌──(kali㉿kali)-[~]
+└─$ cd /media/sf_Desktop/mtkclient-main/mtkclient-main 
+```
+
+The system image file now needs to be mounted the to the directory privously made folder in this example ```/mnt/android```:
+
+```
+┌──(kali㉿kali)-[/media/sf_Desktop/mtkclient-main/mtkclient-main]
+└─$ sudo mount -t ext4 -o loop system-backup.img /mnt/android 
+```
+
+Navigate to the mounted filesystem in the privously made folder:
+
+```
+┌──(kali㉿kali)-[/media/sf_Desktop/mtkclient-main/mtkclient-main]
+└─$ cd /mnt/android                                   
+```
+
+List the directory structure to ensure it was mounted correctly:
+
+```
+┌──(kali㉿kali)-[/mnt/android]
+└─$ ls
+acct  bugreports  charger  d     default.prop  etc               init             init.rc               init.usb.rc       lost+found  odm  proc     sbin    storage  system      vendor
+bin   cache       config   data  dev           fstab.enableswap  init.environ.rc  init.usb.configfs.rc  init.zygote32.rc  mnt         oem  product  sdcard  sys      ueventd.rc  verity_key
+```
+
+We wanted to remove all the boot animations files so we then navigate to the directory, located in the ```system/media```: 
+
+```                                                                        
+┌──(kali㉿kali)-[/mnt/android]
+└─$ cd system/media 
+
+```
+List the directory structure again and we can see the files i want to remove:
+
+```
+┌──(kali㉿kali)-[/mnt/android/system/media]
+└─$ ls
+audio  bootanimation.zip  bootaudio.mp3  shutanimation.zip  shutaudio.mp3
+```
+
+Remove the files that are no longer needed. Note the sudo command or you will get permission denied:
+
+```                                                                                                                                                            
+┌──(kali㉿kali)-[/mnt/android/system/media]
+└─$ sudo rm bootaudio.mp3 bootanimation.zip shutanimation.zip shutaudio.mp3
+```                                                                                                                                                            
+
+Check the Files have gone.
+
+```
+┌──(kali㉿kali)-[/mnt/android/system/media]
+└─$ ls
+audio
+```   
+
+While testing, it was found that removing all the audio files and animations casued the radio to boot up with the stock android boot animation screen, It then got stuck at this point, although the system was still accessible via adb it was found not to be possible to navigate through the radios screen any more.
+
+To resolve this process it was possible to supply your own bootanimation.zip by replacing the original or just by disabling the animation all togeather. 
+This is what we opted for in the process of this guide.
+
+To disable the boot animations without having to root the radio, you can edit the ```default.prop``` file inside the mounted file system. 
+Please note you also have to be root/sudo on the local Linux system for completing this as you will get permission denied problems.
+
+In the original ```default.prop``` file at the bottom of the ADDITIONAL_DEFAULT_PROPERTIES their is a line with the values of  ```ro.base_build=noah``` 
+a new line needs to be appended to this file with your favourite linux text editor of ```debug.sf.nobootanimation=1```.
+
+
+Original ```default.prop```:
+
+```
+┌──(kali㉿kali)-[/mnt/android]
+└─$ sudo cat default.prop 
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.actionable_compatible_property.enabled=true
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=0
+ro.allow.mock.location=0
+ro.debuggable=1
+ro.audio.usb.period_us=16000
+ro.camera.api1.max_preview_size=960x540
+ro.mediatek.platform=MT6739
+dalvik.vm.image-dex2oat-Xms=64m
+dalvik.vm.image-dex2oat-Xmx=64m
+dalvik.vm.dex2oat-Xms=64m
+dalvik.vm.dex2oat-Xmx=512m
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.appimageformat=lz4
+pm.dexopt.first-boot=quicken
+pm.dexopt.boot=verify
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.ab-ota=speed-profile
+pm.dexopt.inactive=verify
+pm.dexopt.shared=speed
+dalvik.vm.dex2oat-minidebuginfo=true
+debug.atrace.tags.enableflags=0
+ro.hwui.path_cache_size=0
+ro.hwui.text_small_cache_width=512
+ro.hwui.text_small_cache_height=256
+ro.hwui.disable_asset_atlas=true
+ro.mediatek.version.branch=alps-mp-p0.mp1
+ro.mediatek.version.release=alps-mp-p0.mp1-V5.10
+ro.opa.eligible_device=true
+ro.setupwizard.mode=OPTIONAL
+setupwizard.feature.predeferred_enabled=false
+ro.com.google.gmsversion=9_201903
+ro.com.android.mobiledata=true
+ro.base_build=noah
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Fri Nov 8 17:35:50 CST 2024
+ro.bootimage.build.date.utc=1731058550
+ro.bootimage.build.fingerpri
+```
+
+
+Edited ```default.prop``` file:
+
+
+```
+┌──(kali㉿kali)-[/mnt/android]
+└─$ sudo cat default.prop 
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.actionable_compatible_property.enabled=true
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=0
+ro.allow.mock.location=0
+ro.debuggable=1
+ro.audio.usb.period_us=16000
+ro.camera.api1.max_preview_size=960x540
+ro.mediatek.platform=MT6739
+dalvik.vm.image-dex2oat-Xms=64m
+dalvik.vm.image-dex2oat-Xmx=64m
+dalvik.vm.dex2oat-Xms=64m
+dalvik.vm.dex2oat-Xmx=512m
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.appimageformat=lz4
+pm.dexopt.first-boot=quicken
+pm.dexopt.boot=verify
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.ab-ota=speed-profile
+pm.dexopt.inactive=verify
+pm.dexopt.shared=speed
+dalvik.vm.dex2oat-minidebuginfo=true
+debug.atrace.tags.enableflags=0
+ro.hwui.path_cache_size=0
+ro.hwui.text_small_cache_width=512
+ro.hwui.text_small_cache_height=256
+ro.hwui.disable_asset_atlas=true
+ro.mediatek.version.branch=alps-mp-p0.mp1
+ro.mediatek.version.release=alps-mp-p0.mp1-V5.10
+ro.opa.eligible_device=true
+ro.setupwizard.mode=OPTIONAL
+setupwizard.feature.predeferred_enabled=false
+ro.com.google.gmsversion=9_201903
+ro.com.android.mobiledata=true
+ro.base_build=noah
+debug.sf.nobootanimation=1
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Fri Nov 8 17:35:50 CST 2024
+ro.bootimage.build.date.utc=1731058550
+ro.bootimage.build.fingerpri
+```
+
+
+Upon completion of editing the ```default.prop``` file we next need to navigate out of the mounted filesystem ready for unmounting. 
+Note if you do not perform this step it will complain when you try to run the next command in the process.
+
+```
+┌──(kali㉿kali)-[/mnt/android/system/media]
+└─$ cd             
+```   
+
+Finally for the linux side of things, Unmount the Filesystem
+
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo umount /mnt/android
+```                                                                                                                                                                                                                                        
+
+
+## Upload Edited Filesystem
+
+Once the filesystem has been edited the last part of the process is to just upload it back to the radio.
+Once completed remove the battery and usb cable, Reconnect the battery and start up your radio with no sounds or animation.
+
+
+```
+C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py w system system-backup.img
+MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
+
+Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile to brom mode
+
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+
+
+..Port - Device detected :)
+Preloader -     CPU:                    MT6739/MT6731/MT8765()
+Preloader -     HW version:             0x0
+Preloader -     WDT:                    0x10007000
+Preloader -     Uart:                   0x11002000
+Preloader -     Brom payload addr:      0x100a00
+Preloader -     DA payload addr:        0x201000
+Preloader -     CQ_DMA addr:            0x10212000
+Preloader -     Var1:                   0xb4
+Preloader - Disabling Watchdog...
+Preloader - HW code:                    0x699
+Preloader - Target config:              0x0
+Preloader -     SBC enabled:            False
+Preloader -     SLA enabled:            False
+Preloader -     DAA enabled:            False
+Preloader -     SWJTAG enabled:         False
+Preloader -     EPP_PARAM at 0x600 after EMMC_BOOT/SDMMC_BOOT:  False
+Preloader -     Root cert required:     False
+Preloader -     Mem read auth:          False
+Preloader -     Mem write auth:         False
+Preloader -     Cmd 0xC8 blocked:       False
+Preloader - Get Target info
+Preloader -     HW subcode:             0x8a00
+Preloader -     HW Ver:                 0xcb00
+Preloader -     SW Ver:                 0x2
+Preloader - ME_ID:                      8C9061A2190D6F2C543FF335D358DBB6
+Preloader - SOC_ID:                     4A13B658562E8689A847DCA687CFE3C339F3C1866DABBF304FFCD5EEC4CF47D4
+DaHandler - Device is unprotected.
+DaHandler - Device is in Preloader-Mode.
+DAXFlash - Uploading xflash stage 1 from MTK_DA_V5.bin
+XFlashExt - Patching da1 ...
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "hash_check" in preloader
+Mtk - Patched "Patched loader msg" in preloader
+Mtk - Patched "get_vfy_policy" in preloader
+XFlashExt - Patching da2 ...
+XFlashExt - Security check patched
+XFlashExt - DA version anti-rollback patched
+XFlashExt - SBC patched to be disabled
+XFlashExt - Register read/write not allowed patched
+DAXFlash - Successfully uploaded stage 1, jumping ..
+Preloader - Jumping to 0x200000
+Preloader - Jumping to 0x200000: ok.
+DAXFlash - Successfully received DA sync
+DAXFlash - Uploading stage 2...
+DAXFlash - Upload data was accepted. Jumping to stage 2...
+DAXFlash - Boot to succeeded.
+DAXFlash - Successfully uploaded stage 2
+DAXFlash - DA SLA is disabled
+DAXFlash - EMMC FWVer:      0x0
+DAXFlash - EMMC ID:         QE63MB
+DAXFlash - EMMC CID:        150100514536334d4203aba6f2a5954b
+DAXFlash - EMMC Boot1 Size: 0x400000
+DAXFlash - EMMC Boot2 Size: 0x400000
+DAXFlash - EMMC GP1 Size:   0x0
+DAXFlash - EMMC GP2 Size:   0x0
+DAXFlash - EMMC GP3 Size:   0x0
+DAXFlash - EMMC GP4 Size:   0x0
+DAXFlash - EMMC RPMB Size:  0x400000
+DAXFlash - EMMC USER Size:  0x3a3e00000
+DAXFlash - HW-CODE         : 0x699
+DAXFlash - HWSUB-CODE      : 0x8A00
+DAXFlash - HW-VERSION      : 0xCB00
+DAXFlash - SW-VERSION      : 0x2
+DAXFlash - CHIP-EVOLUTION  : 0x0
+DAXFlash - DA-VERSION      : 1.0
+DAXFlash - Extensions were accepted. Jumping to extensions...
+DAXFlash - Boot to succeeded.
+DAXFlash - DA Extensions successfully added
+Progress: |██████████| 100.0% Write (0x264000/0x264000, ) 4.61 MB/s60 MB/sMB/s
+Wrote system-backup.img to sector 1294336 with sector count 2506752.
+
+C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
+```
+
 
 
 
