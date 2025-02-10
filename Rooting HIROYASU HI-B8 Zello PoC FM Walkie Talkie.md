@@ -4,8 +4,19 @@ Gaining Root Permissions on the HIROYASU HI-B8 Zello PoC FM Walkie Talkie. To di
 
 ![](logo.png)
 
-Please Note This Is A On Going Proccess So Things May Change, The radio will also boot much slower with the changes made from this guide at the current point due to the Orange status in the bootloader. 
+Please Note This Is An On-Going Process, So Things May Change. The radio will also boot much slower with the changes made from this guide at the current point due to the Orange status in the bootloader. 
 This adds on 5 seconds as Orange state indicates that the device is unlocked, so no verification was done.
+
+
+# Summary
+
+The project was initiated due to the device emitting loud sounds during startup and shutdown. This issue led to an investigation into the device’s security, which revealed that it was running an outdated version of the Android operating system. Additional concerns included a lack of European support and the absence of a company website for the vendor. These factors collectively motivated an effort to remove the startup and shutdown sounds.
+The device's security settings were not properly configured, allowing users to perform actions that could have been restricted with the appropriate settings enabled.
+Two methods were identified for removing the audio and boot animation from the device:
+Soft Modification:
+This approach provides limited root access, but due to a read-only root partition, permanent file system changes are not possible—only temporary modifications can be made. Additionally, unlocking the bootloader triggers security checks, which in turn introduce delays to the boot-up process.
+File System Modification (Preferred Method):
+This method allows direct modification of hardcoded settings without requiring root access. It involves extracting the file system onto a Linux machine, mounting it, making the necessary changes, and re-uploading it to the device. This process is cleaner, faster, and avoids triggering security mechanisms that occur when using the first method.
 
 
 * TOC
@@ -57,7 +68,7 @@ Cellular Network Specifications:
 * 4GFDD: B1/B3/B5/B7/B8/B20/B28A/B28B
 * 4GTDD:B38/B39/B40/B41
 
-Finally No Offical website for the radio so far. we can only find it via chinese market spaces.
+Finally No Official website for the radio so far. we can only find it via Chinese market spaces.
 
 
 # Required software:
@@ -241,7 +252,7 @@ Store this file some where safe for later.
 # Dumping the Boot
 
 Once the full backup has been completed the boot image can be downloaded.
-As explained by the intructions on the original README that comes with Mtk Client we need to first ensure we can dump the boot loader this can be done with the following commands and also displays the output from the targeted device.
+As explained by the instructions on the original README that comes with Mtk Client we need to first ensure we can dump the boot loader this can be done with the following commands and also displays the output from the targeted device.
 
 
 Please Note: In the example the instructions contain the following text:
@@ -282,15 +293,6 @@ MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
 
 Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile to brom mode
 
-Port - Hint:
-
-Power off the phone before connecting.
-For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
-For preloader mode, don't press any hw button and connect usb.
-If it is already connected and on, hold power for 10 seconds to reset.
-
-
-...........
 
 Port - Hint:
 
@@ -377,8 +379,8 @@ DaHandler - Dumped sector 553216 with sector count 49152 as boot.bin.
 
 # Installing Magisk
 
-When the bootloader been succesfully downloaded to the local computer we next need to install the Magisk on the radio 
-to continue the proccess of patching the bootloader. 
+When the bootloader been successfully downloaded to the local computer we next need to install the Magisk on the radio 
+to continue the process of patching the bootloader. 
 
 Please note this cannot be completed from a factory device until you have navigated to the phone dial pad,
 then entering the follow sequence ```*#13579*#``` upon completion it should flash up at the bottom as displayed in the image below. 
@@ -390,10 +392,10 @@ key codes you can enable or disable app installation access. Although if this pr
 
 Upon completion of unlocking the app installation procces we then need to download the patched Magisk [APK file](https://github.com/topjohnwu/Magisk/releases/tag/v28.1)
 
-Once Magisk app is downloaded a few more settings settings need to be set before continuing with the rest of the steps, such as enabling OEM unlocking and USB Debugging. When installed Magisk will allow us to send files to the radio and perform other tasks via commandline "adb" on the radio.
+Once Magisk app is downloaded a few more settings settings need to be set before continuing with the rest of the steps, such as enabling OEM unlocking and USB Debugging. When installed Magisk will allow us to send files to the radio and perform other tasks via command line "adb" on the radio.
 
 
-This can be be achived by proceeding with the following on the radio its self.
+This can be be achieved by proceeding with the following on the radio its self.
 
 Enable Developer Mode:
 
@@ -409,7 +411,7 @@ USB Debugging:
 
 
 Upon completion of the settings changes required for installing Masgisk and access to the device over USB. Its
-now possible to remotly install the apk file following the below commands.
+now possible to remotely install the apk file following the below commands.
 
 
 Install magisk apk
@@ -429,7 +431,7 @@ adb push boot.img /sdcard/Download
 ```
 
 Up on completion of the upload to the radio. We now need to 
-pick up the device and Start magisk app and navigate 
+pick up the device and Start Magisk app and navigate 
 to the file manager then find the app called app-release.apk and tap on it to Install. 
 
 Once the app is installed we need to open it and select the boot.bin file we have uploaded prior.
@@ -458,15 +460,6 @@ MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
 
 Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile to brom mode
 
-Port - Hint:
-
-Power off the phone before connecting.
-For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
-For preloader mode, don't press any hw button and connect usb.
-If it is already connected and on, hold power for 10 seconds to reset.
-
-
-...........
 
 Port - Hint:
 
@@ -653,7 +646,7 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 # Unlocking The Bootloader
 
-The last stage of using MTK Client is to unlock the bootloader which allows for magisk to gain its root access.
+The last stage of using MTK Client is to unlock the bootloader which allows for Magisk to gain its root access.
 It is no longer required to use MTK client and its key combinations from here onwards, unless you later want to change the boot splash screen
 
 
@@ -763,7 +756,7 @@ If this happens just hold the orange emergency button on the top
 ![](recovery.jpg)
 
 The radio will then take a bit of time to reboot. Once it has started up as normal again run a adb shell command from the host
-computer and if you try "su" command you should notice permissions denied warning. This is fine, the magisk app is currently blocking access. Open up the app and on the bottom navigation bar select super user and then enable it, now within adb you should be able to use "su" and check your permissions with "id" command.
+computer and if you try "su" command you should notice permissions denied warning. This is fine, the Magisk app is currently blocking access. Open up the app and on the bottom navigation bar select super user and then enable it, now within adb you should be able to use "su" and check your permissions with "id" command.
 
 
 ```
@@ -807,7 +800,7 @@ m3_h:/ #
 
 # Replace The Boot Splash images
 
-Download the logo.bin file from the radio with mtk client and using the special button combinations used priviously in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
+Download the logo.bin file from the radio with mtk client and using the special button combinations used previously in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
 
 ```
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py r logo logo.bin
@@ -815,15 +808,6 @@ MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
 
 Preloader - Status: Waiting for PreLoader VCOM, please reconnect mobile to brom mode
 
-Port - Hint:
-
-Power off the phone before connecting.
-For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
-For preloader mode, don't press any hw button and connect usb.
-If it is already connected and on, hold power for 10 seconds to reset.
-
-
-...........
 
 Port - Hint:
 
@@ -912,9 +896,9 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 Download LogoBuilder_v1.6 from [here](https://xdaforums.com/t/changing-boot-logo-logo-bin-program.1953726/)
 Extract the contents and modification needs to be performed to the sizes.txt file so that the files will
-be loaded with the correct screen resolulation read for repacking.
+be loaded with the correct screen resolution read for repacking.
 
-Replace the contents of sizes.txt with the following resoultions.
+Replace the contents of sizes.txt with the following resolutions.
 
 
 ```
@@ -938,8 +922,7 @@ How to use:
 ![](LoadedBootImages.png)
 
 
-Please note there are two images used in the folder for the boot splash screen. Both need to be 
-overitten or you will still see parts of the old image.
+Please note there are two images used in the folder for the boot splash screen. Both need to be overwritten or you will still see parts of the old image.
 
 
 ![](BuiltLogoBin.PNG)
@@ -964,15 +947,7 @@ For preloader mode, don't press any hw button and connect usb.
 If it is already connected and on, hold power for 10 seconds to reset.
 
 
-...........
-
-
-Port - Hint:
-
-Power off the phone before connecting.
-For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
-For preloader mode, don't press any hw button and connect usb.
-If it is already connected and on, hold power for 10 seconds to reset.
+..
 
 
 Port - Device detected :)
@@ -1081,7 +1056,7 @@ works with the example gif.
 ```
 
 A Note From Downloading the original boot animations and opening up the zip there is a file called desc.txt
-this has the resultion and FPS used for crafting the commandline up.
+this has the resolution and FPS used for crafting the commandline up.
 
 
 ```
@@ -1091,7 +1066,7 @@ p 0 0 part1
 
 ```
 
-## Create a example boot animation for testing.
+## Create an example boot animation for testing.
 
 ```
 C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master>python3 create_bootanimation.py C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\example\example.gif 240 320 10 C:\Users\Gamer\Desktop\create_android_bootanimation-master\create_android_bootanimation-master\ -zip
@@ -1167,7 +1142,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 ### Dump The Filesystem
 
-Using MTKClient it is also possible to dump the file system allowing for mounting and editing using a linux operating system. 
+Using MTKClient it is also possible to dump the file system allowing for mounting and editing using a Linux operating system. 
 But first we need to dump the radios root filesystem directory known as ```/``` in this case.
 
 
@@ -1266,7 +1241,7 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ### Edit The Filesystem
 
 With a Linux computer system or Virtual Machine its possible to mount the root filesystem that was backed up and make changes. 
-In the below example we was using a kali virtual machine inside of virtual box.
+In the below example we was using a Kali virtual machine inside of Virtual Box.
 We also mapped a temp share to are Desktop where we had the mtkclient directory which the backup of the ```system.img``` was saved. 
 Please note we also made a copy of this file as it will be edited when you mount and any miss haps could result in a broken filesystem. 
 If you have any problem please remeber you can always restore the device with the backup created at the start of the project.
@@ -1341,16 +1316,16 @@ Check the Files have gone.
 audio
 ```   
 
-While testing, it was found that removing all the audio files and animations casued the radio to boot up with the stock android boot animation screen, It then got stuck at this point, although the system was still accessible via adb it was found not to be possible to navigate through the radios screen any more.
+While testing, it was found that removing all the audio files and animations caused the radio to boot up with the stock android boot animation screen, It then got stuck at this point, although the system was still accessible via adb it was found not to be possible to navigate through the radios screen any more.
 
-To resolve this process it was possible to supply your own bootanimation.zip by replacing the original or just by disabling the animation all togeather. 
+To resolve this process it was possible to supply your own bootanimation.zip by replacing the original or just by disabling the animation all together. 
 This is what we opted for in the process of this guide.
 
 To disable the boot animations without having to root the radio, you can edit the ```default.prop``` file inside the mounted file system. 
 Please note you also have to be root/sudo on the local Linux system for completing this as you will get permission denied problems.
 
 In the original ```default.prop``` file at the bottom of the ADDITIONAL_DEFAULT_PROPERTIES their is a line with the values of  ```ro.base_build=noah``` 
-a new line needs to be appended to this file with your favourite linux text editor of ```debug.sf.nobootanimation=1```.
+a new line needs to be appended to this file with your favourite Linux text editor of ```debug.sf.nobootanimation=1```.
 
 
 Original ```default.prop```:
@@ -1598,12 +1573,7 @@ C:\Users\Gamer\adb-fastboot\platform-tools>
 
 ![](recovery.jpg)
 
-Then wait for the radio to reboot. you can now use the knob next to the antenna to the navigate up and down 
-through the menu's to select a item just hold down the orange emergency button on the top of the radio for a couple
-of seconds. Please note while in this mode the radio is also still avaiblie via adb.
-
-
-
+Then wait for the radio to reboot. you can now use the knob next to the antenna to the navigate up and down through the menu's to select an item just hold down the orange emergency button on the top of the radio for a couple of seconds. Please note while in this mode the radio is also still available via adb.
 
 
 ## MTK Engineer Mode
@@ -1624,7 +1594,7 @@ Dial:
 
 ## Radio Info 
 
-This has been renamed  to 'testing' it seems but on most MTK phones it should be 'Info'.
+This has been renamed to 'testing' it seems but on most MTK phones it should be 'Info'.
 
 Dial:
 ```
@@ -1636,9 +1606,9 @@ Dial:
 ![](testing_info.png)
 
 
-## Enable / Disable App Installaion
+## Enable / Disable App Installation
 
-Like the engineering mode, navigate to the dialpad and enter the below codes. This will either enable of diable app installation on the radio. 
+Like the engineering mode, navigate to the dial pad and enter the below codes. This will either enable of disable app installation on the radio. 
 
 Dial: 
 ```
@@ -1765,9 +1735,9 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 # Internals
 
-Removing the shell there are two security screws at the bottom of the radio behind the battery. Using a small allen key will 
-loosten the screws if you do not have the correct tool. 
-Finally, there are a couple of clips holding the cover on, using a set of tweasers it was possible to pull the cover off the back revealing the internals.
+Removing the shell there are two security screws at the bottom of the radio behind the battery. Using a small Allen key will 
+loosen the screws if you do not have the correct tool. 
+Finally, there are a couple of clips holding the cover on, using a set of tweezers it was possible to pull the cover off the back revealing the internals.
 
 ![](internals.jpg)
 
@@ -1787,3 +1757,5 @@ Finally, there are a couple of clips holding the cover on, using a set of twease
 * The Creator of Magisk
 * Thanks to Jeremy Turner M1CVZ for ordering the radio allowing M7SYN to perform the rooting process. 
 * Editing & proof-reading done by Ben Brown
+
+
