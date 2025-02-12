@@ -20,7 +20,9 @@ Two methods were identified for removing the audio and boot animation from the d
 Soft Modification:
 
 This approach provides limited root access, but due to a read-only root partition, permanent file system changes are not possible—only temporary modifications can be made. Additionally, unlocking the bootloader triggers security checks, which in turn introduce delays to the boot-up process.
-File System Modification (Preferred Method)
+
+File System Modification (Preferred Method):
+
 This method allows direct modification of hardcoded settings without requiring root access. 
 It involves extracting the file system onto a Linux machine, mounting it, making the necessary changes, and re-uploading it to the device. This process is cleaner, faster, and avoids triggering security mechanisms that occur when using the first method.
 
