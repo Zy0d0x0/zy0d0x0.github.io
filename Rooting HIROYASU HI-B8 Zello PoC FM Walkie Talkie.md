@@ -10,13 +10,19 @@ This adds on 5 seconds as Orange state indicates that the device is unlocked, so
 
 # Summary
 
-The project was initiated due to the device emitting loud sounds during startup and shutdown. This issue led to an investigation into the device’s security, which revealed that it was running an outdated version of the Android operating system. Additional concerns included a lack of European support and the absence of a company website for the vendor. These factors collectively motivated an effort to remove the startup and shutdown sounds.
+The project was initiated due to the device emitting loud sounds during startup and shutdown. 
+This issue led to an investigation into the device’s security, which revealed that it was running an outdated version of the Android operating system. 
+Additional concerns included a lack of European support and the absence of a company website for the vendor. 
+These factors collectively motivated an effort to remove the startup and shutdown sounds.
 The device's security settings were not properly configured, allowing users to perform actions that could have been restricted with the appropriate settings enabled.
 Two methods were identified for removing the audio and boot animation from the device:
+
 Soft Modification:
+
 This approach provides limited root access, but due to a read-only root partition, permanent file system changes are not possible—only temporary modifications can be made. Additionally, unlocking the bootloader triggers security checks, which in turn introduce delays to the boot-up process.
-File System Modification (Preferred Method):
-This method allows direct modification of hardcoded settings without requiring root access. It involves extracting the file system onto a Linux machine, mounting it, making the necessary changes, and re-uploading it to the device. This process is cleaner, faster, and avoids triggering security mechanisms that occur when using the first method.
+File System Modification (Preferred Method)
+This method allows direct modification of hardcoded settings without requiring root access. 
+It involves extracting the file system onto a Linux machine, mounting it, making the necessary changes, and re-uploading it to the device. This process is cleaner, faster, and avoids triggering security mechanisms that occur when using the first method.
 
 
 * TOC
