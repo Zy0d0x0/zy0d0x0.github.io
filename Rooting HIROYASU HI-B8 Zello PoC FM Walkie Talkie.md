@@ -281,7 +281,7 @@ The [Prefered](https://zy0d0x0.github.io/Rooting%20HIROYASU%20HI-B8%20Zello%20Po
 The Second slow booting method with soft root access, follow along below.
 
 
-# Dumping the Boot
+# Dumping the Boot (Optional Slower Booting Times)
 
 Once the full backup has been completed the boot image can be downloaded.
 As explained by the instructions on the original README that comes with Mtk Client we need to first ensure we can dump the boot loader this can be done with the following commands and also displays the output from the targeted device.
@@ -379,7 +379,7 @@ Progress: |██████████| 100.0% Read (0xC000/0xC000, ) 0.00 MB
 DaHandler - Dumped sector 553216 with sector count 49152 as boot.bin.
 ```
 
-# Installing Magisk
+# Installing Magisk (Optional Slower Booting Times)
 
 When the bootloader been successfully downloaded to the local computer we next need to install the Magisk on the radio 
 to continue the process of patching the bootloader. 
@@ -451,7 +451,7 @@ mv [displayed magisk patched boot filename here] boot.patched
 
 ```
 
-# Erase Userdata & Metadata 
+# Erase Userdata & Metadata  (Optional Slower Booting Times)
 
 Note: This will remove all apps that are not default to the rom so if you installed additional 
 apps you will loose them so ensure you have them backed-up.
@@ -553,7 +553,7 @@ All partitions formatted.
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ```
 
-# Writing the Custom Patched Bootrom 
+# Writing the Custom Patched Bootrom (Optional Slower Booting Times)
 
 ```
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py w boot boot.patched
@@ -646,7 +646,7 @@ Wrote boot.patched to sector 553216 with sector count 49152.
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ```
 
-# Unlocking The Bootloader
+# Unlocking The Bootloader (Optional Slower Booting Times)
 
 The last stage of using MTK Client is to unlock the bootloader which allows for Magisk to gain its root access.
 It is no longer required to use MTK client and its key combinations from here onwards, unless you later want to change the boot splash screen
@@ -750,7 +750,7 @@ DaHandler - [LIB]: ←[31mDevice is already unlocked←[0m
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ```
 
-# Enabling Root Access
+# Enabling Root Access (Optional Slower Booting Times)
 
 Once the radio has booted up as normal you will need to reinstall magisk apk and then start it up, This may cause the radio to reboot into recovery mode. 
 If this happens just hold the orange emergency button on the top 
@@ -770,7 +770,7 @@ m3_h:/ #
 ```
 
 
-# Soft Disable Boot Animation
+# Soft Disable Boot Animation (Optional Slower Booting Times)
 
 It is also possible to just disable the boot animation allowing just the boot splash images to become the boot image.
 This will also prevent the audio from playing and you will loose the shut down animation.
@@ -800,7 +800,7 @@ m3_h:/ #
 
 
 
-# Replace The Boot Splash images
+# Replace The Boot Splash images (Optional Slower Booting Times)
 
 Download the logo.bin file from the radio with mtk client and using the special button combinations used previously in this guide to get the radio detected. Use the following command to download into the mtk client directory called logo.bin
 
@@ -1035,7 +1035,7 @@ now be displayed.
 
 
 
-# Create Custom Boot Animation ( Optional - Causes Slower Booting Times )
+# Create Custom Boot Animation (Optional Slower Booting Times)
 
 If you have opted to create a custom boot animation, please note this may add even more time to the boot process.
 
@@ -1100,7 +1100,7 @@ m3_h:/ #
 
 
 
-## Soft Overwrite The Boot & Shutdown Animations
+## Soft Overwrite The Boot & Shutdown Animations (Optional Slower Booting Times)
 
 ```
 m3_h:/ # chown root:root /data/adb/bootanimation.zip
@@ -1115,7 +1115,7 @@ m3_h:/ # reboot
 ```
 
 
-## Soft Overwrite The Boot and Shutdown Audio 
+## Soft Overwrite The Boot and Shutdown Audio  (Optional Slower Booting Times)
 
 Please note if you replace the audio with a custom animation this will work using the `touch` command creating a blank file. If
 you decide to keep the original boot animation you will need to replace it with a real audio file or the radio does not fully boot,
