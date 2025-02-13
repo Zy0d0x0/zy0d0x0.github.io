@@ -24,7 +24,7 @@ This approach provides limited root access, but due to a read-only root partitio
 **File System Modification (Preferred Method):**
 
 This method allows direct modification of hardcoded settings without requiring root access. 
-It involves extracting the file system onto a Linux machine, mounting it, making the necessary changes, and re-uploading it to the device. 
+It involves mounting the file system onto a Linux machine, making the necessary changes, and re-uploading it to the device. 
 This process is cleaner, faster, and avoids triggering security mechanisms that occur when using the first method.
 
 
