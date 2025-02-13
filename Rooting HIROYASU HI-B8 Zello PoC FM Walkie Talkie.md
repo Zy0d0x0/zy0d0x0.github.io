@@ -1779,6 +1779,10 @@ This is not entirely accurate, we need to perform the following steps:
 
 This has been found to possible take the second time to be detected by mtk client.
 
+If you feel like you have bricked your device, its possible to listen for usb connection sounds
+if the radio keeps looping and no charging images are displayed this mean the radio is currently
+it a boot loop.
+
 
 
 # Resources
