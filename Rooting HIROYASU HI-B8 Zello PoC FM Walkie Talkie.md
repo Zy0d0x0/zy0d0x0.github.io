@@ -4,8 +4,7 @@ Gaining Root Permissions on the HIROYASU HI-B8 Zello PoC FM Walkie Talkie. To di
 
 ![](logo.png)
 
-Please Note This Is An On-Going Process, So Things May Change. The radio will also boot much slower with the changes made from this guide at the current point due to the Orange status in the bootloader. 
-This adds on 5 seconds as Orange state indicates that the device is unlocked, so no verification was done.
+Please Note This Is An On-Going Process, So Things May Change. 
 
 
 # Summary
