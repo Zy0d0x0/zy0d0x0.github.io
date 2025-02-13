@@ -1564,6 +1564,7 @@ audio
 m3_h:/ $
 ```
 
+As of 13-02-2025 we are working out the best way to replace the 4g LTE boot splash screen without having to unlock the boot loader which results in additional boot times.
 
 
 # Additional Commands & Modes
