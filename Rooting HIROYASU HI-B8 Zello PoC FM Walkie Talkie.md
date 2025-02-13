@@ -1759,7 +1759,7 @@ Finally, there are a couple of clips holding the cover on, using a set of tweeze
 
 # Additional Notes
 
-## Preloader Mode
+## Preloader Mode ( Possibly Bricked )
 
 Please Note: In the example the instructions contain the following text:
 
@@ -1782,6 +1782,8 @@ This has been found to possible take the second time to be detected by mtk clien
 If you feel like you have bricked your device, its possible to listen for usb connection sounds
 if the radio keeps looping and no charging images are displayed this mean the radio is currently
 it a boot loop.
+
+From this point it is still possible to unbrick the device with the full image backup that should of been created when starting this guide.
 
 
 
