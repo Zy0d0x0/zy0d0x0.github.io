@@ -1143,7 +1143,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
-# Hard Remove Boot Sounds & Animations - No Root Access Required
+# File System Modification (Preferred Method):
 
 ### Dump The Filesystem
 
