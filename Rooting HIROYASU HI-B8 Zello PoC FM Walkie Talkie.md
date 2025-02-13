@@ -1642,6 +1642,14 @@ Bug report copied to bugreport.zip
 C:\Users\Gamer\adb-fastboot\platform-tools>
 ```
 
+## View IMIE & MEID
+
+Dial: 
+```
+*#06#
+```
+
+
 ## Restoring Full Backup
 
 Please note this will take about a hour to complete.
