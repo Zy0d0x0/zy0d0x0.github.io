@@ -84,12 +84,12 @@ Cellular Network Specifications:
 Download the Android SDK Platform Tools ZIP file for [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 
 * Extract the ZIP File in your computer’s Downloads folder.
-* Right-click the ZIP file and select “Extract All.”
-* Choose a destination folder where you want to extract the files, and click “Extract.”  This will create a folder containing the ADB and other tools.
+* Right-click the ZIP file and select ```Extract All```.
+* Choose a destination folder where you want to extract the files, and click ```Extract```. This will create a folder containing the ADB and other tools.
 * Navigate to the folder where you extracted the contents of the ZIP file. 
-* This folder should contain the “adb.exe” file. Click on the folder’s address bar at the top. It will display the full path to the folder.
-* Open command prompt and "cd" to the path copied from the address bar.
-* Adb.exe can now be executed with ./adb 
+* This folder should contain the ```adb.exe``` file. Click on the folder’s address bar at the top. It will display the full path to the folder.
+* Open command prompt and ```cd``` to the path copied from the address bar.
+* Adb.exe can now be executed with ```./adb -h```. 
 
 The path used in this guide is ```C:\Users\Gamer\adb-fastboot\platform-tools\``` so when this is displayed use your own path.
 
