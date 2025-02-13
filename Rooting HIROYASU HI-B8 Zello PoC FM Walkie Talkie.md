@@ -171,9 +171,9 @@ If it is already connected and on, hold power for 10 seconds to reset.
 
 This is not entirely accurate, we need to perform the following steps:
 
-* Power Off The Radio With A USB Cabled Left Plugged Into the radio but not the laptop end. Remove The Battery.
+* Power Off The Radio With A USB Cabled Left Plugged Into the radio and the laptop end. Remove The Battery.
 
-* Reconnect The Battery And With The 2 Side Buttons Below The Main PTT Button Held Down Plugin The Radio. When MTK Client Commands Are Running This Should Get Detected.
+* Reconnect The Battery And With The 2 Side Buttons Below The Main PTT Button Held Down. When MTK Client Commands Are Running This Should Get Detected.
 
 If It Fails Just Redo The Whole Process, Please Note it took a few times to get it working with the commands so if it does not get detected don’t panic just keep trying.
 
