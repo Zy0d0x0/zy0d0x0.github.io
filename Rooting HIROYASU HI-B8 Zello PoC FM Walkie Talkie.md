@@ -789,8 +789,8 @@ You can verify this your self.
 
 ```
 m3_h:/ $ su
-m3_h:/ # getprop |grep orange
-[ro.boot.verifiedbootstate]: [orange]
+m3_h:/ # getprop ro.boot.verifiedbootstate
+orange
 m3_h:/ #
 ```
 
