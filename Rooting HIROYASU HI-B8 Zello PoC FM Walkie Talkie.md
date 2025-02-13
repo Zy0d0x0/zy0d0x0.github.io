@@ -1556,12 +1556,20 @@ Wrote system-backup.img to sector 1294336 with sector count 2506752.
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ```
 
-Note: If you have rooted the device and have the soft edits still in place and followed this part of the guide.
-It is possible to remove the soft edits with the following command as a root user on the local device.
+Once completed the radio should boot up with no boot animation or sounds.
+It is also possible to check to ensure the boot state is infact in the green state via adb.
+
 ```
-rm /data/adb/service.d/change_bootanimation.sh
-reboot
+m3_h:/ $ getprop ro.boot.verifiedbootstate
+green
+m3_h:/ $ ls /sy
+sys/     system/
+m3_h:/ $ ls /system/media/
+audio
+m3_h:/ $
 ```
+
+if you would like to also change the boot splash image follow the guide from [here](#Replace-The-Boot-Splash-images)
 
 
 # Additional Commands & Modes
