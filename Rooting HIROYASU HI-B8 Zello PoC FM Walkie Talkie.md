@@ -158,6 +158,27 @@ Before starting this project its advised to make a full backup of the radio, thi
 Please note this could take around 10-15 minutes to copy the file back across the usb to the local computer.
 the overall file will also take up around 14.5 GB of local space.
 
+Please Note: In the example the instructions contain the following text:
+
+```
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+```
+
+This is not entirely accurate, we need to perform the following steps:
+
+* Power Off The Radio With A USB Cabled Left Plugged Into the radio but not the laptop end. Remove The Battery.
+
+* Reconnect The Battery And With The 2 Side Buttons Below The Main PTT Button Held Down Plugin The Radio. When MTK Client Commands Are Running This Should Get Detected.
+
+If It Fails Just Redo The Whole Process, Please Note it took a few times to get it working with the commands so if it does not get detected don’t panic just keep trying.
+
+Finally, This will need to be reproduced for all the commands used below until you have completed the process.
+
 ```
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>python3 mtk.py rf backup.img
 MTK Flash/Exploit Client Public V2.0.1 (c) B.Kerler 2018-2024
@@ -260,36 +281,6 @@ Store this file some where safe for later.
 
 Once the full backup has been completed the boot image can be downloaded.
 As explained by the instructions on the original README that comes with Mtk Client we need to first ensure we can dump the boot loader this can be done with the following commands and also displays the output from the targeted device.
-
-
-Please Note: In the example the instructions contain the following text:
-
-
-```
-
-Port - Hint:
-
-Power off the phone before connecting.
-For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
-For preloader mode, don't press any hw button and connect usb.
-If it is already connected and on, hold power for 10 seconds to reset.
-
-```
-
-
-This is not entirely accurate, we need to perform the following steps:
-
-* Power Off The Radio With A USB Cabled Left Plugged Into the radio but not the laptop end.
-Remove The Battery. 
-
-* Reconnect The Battery And With The 2 Side Buttons Below The Main PTT Button Held Down
-Plugin The Radio. When MTK Client Commands Are Running This Should Get Detected.
-
-If It Fails Just Redo The Whole Process, Please Note it took a few times to get it working
-with the commands so if it does not get detected don't panic just keep trying.
-
-Finally, This will need to be reproduced for all the commands used below until you
-have completed the process of rooting the radio.
 
 Below Is a Example of Downloading the Bootloader to the local computer as boot.bin:
 
