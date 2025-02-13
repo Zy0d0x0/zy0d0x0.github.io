@@ -1568,7 +1568,7 @@ m3_h:/ $
 
 # Additional Commands & Modes
 
-## Boot Into Recovery Mode
+## Boot Into Recovery Mode ( Unlocked Bootloader Required )
 
 Booting into recovery mode was originally disabled and the radio would not do anything other than crash the display.
 When the bootloader is unlocked with the MTK client this allowed for recovery mode.
