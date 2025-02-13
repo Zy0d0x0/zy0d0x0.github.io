@@ -1143,9 +1143,7 @@ Example Youtube short of the replaced boot animation and audio files.
 
 
 
-# Possibly No Root Access Required - In Current Testing Phase
-
-## Hard Remove Boot Sounds & Animations
+# Hard Remove Boot Sounds & Animations - No Root Access Required
 
 ### Dump The Filesystem
 
