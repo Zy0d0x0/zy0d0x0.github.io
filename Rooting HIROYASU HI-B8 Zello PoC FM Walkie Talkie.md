@@ -274,6 +274,11 @@ C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 
 Store this file some where safe for later.
 
+From this point in the guide it is possible to go two different routes as explained in the summary. 
+
+The [Preffered](https://zy0d0x0.github.io/Rooting%20HIROYASU%20HI-B8%20Zello%20PoC%20FM%20Walkie%20Talkie#file-system-modification-preferred-method) method requires no root on the device but a linux operating system to make edits to the radios filesystem which does not cause any security mechninism to kick in and the boot times are not efftect. 
+
+The Second slow booting method with soft root access, follow along below.
 
 
 # Dumping the Boot
