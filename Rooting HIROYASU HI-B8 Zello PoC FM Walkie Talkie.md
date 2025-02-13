@@ -1757,6 +1757,28 @@ Finally, there are a couple of clips holding the cover on, using a set of tweeze
 
 ![](internals.jpg)
 
+# Additional Notes
+
+## Preloader Mode
+
+Please Note: In the example the instructions contain the following text:
+
+```
+Port - Hint:
+
+Power off the phone before connecting.
+For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
+For preloader mode, don't press any hw button and connect usb.
+If it is already connected and on, hold power for 10 seconds to reset.
+```
+
+This is not entirely accurate, we need to perform the following steps:
+
+* Power Off The Radio With A USB Cabled Left Plugged Into the radio and the laptop end. Remove The Battery.
+* Reconnect The Battery And With The 2 Side Buttons Below The Main PTT Button Held Down. When MTK Client Commands Are Running This Should Get Detected.
+
+This has been found to possible take the second time to be detected by mtk client.
+
 
 
 # Resources
