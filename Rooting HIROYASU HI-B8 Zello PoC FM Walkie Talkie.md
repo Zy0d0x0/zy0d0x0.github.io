@@ -174,7 +174,10 @@ This is not entirely accurate, we need to perform the following steps:
 * Reconnect The Battery And wait for the USB connection notification sound on the computer.
 * Disconnect and reconnect the battery again and it should now be detected.
 
+[![Example Of Preloader Mode](https://img.youtube.com/vi/_PI75gAN9Kw/0.jpg)](https://youtu.be/_PI75gAN9Kw)
+
 If It Fails Just Redo The Whole Process, Please Note it took a few times to get it working with the commands so if it does not get detected don’t panic just keep trying.
+
 
 Finally, This will need to be reproduced for all the commands used below until you have completed the process.
 
