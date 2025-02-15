@@ -1570,6 +1570,9 @@ m3_h:/ $
 As of 13-02-2025 we are working out the best way to replace the 4g LTE boot splash screen without having to unlock the boot loader which results in additional boot times.
 
 
+[![Removed Boot Audio](https://img.youtube.com/vi/ImmJ6UJhMG4/0.jpg)](https://youtube.com/shorts/ImmJ6UJhMG4)
+
+
 # Additional Commands & Modes
 
 ## Boot Into Recovery Mode ( Unlocked Bootloader Required )
