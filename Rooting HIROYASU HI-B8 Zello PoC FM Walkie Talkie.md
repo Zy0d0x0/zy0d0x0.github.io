@@ -1775,9 +1775,8 @@ If it is already connected and on, hold power for 10 seconds to reset.
 This is not entirely accurate, we need to perform the following steps:
 
 * Power Off The Radio With A USB Cabled Left Plugged Into the radio and the laptop end. Remove The Battery.
-* Reconnect The Battery And With The 2 Side Buttons Below The Main PTT Button Held Down. When MTK Client Commands Are Running This Should Get Detected.
-
-This has been found to possible take the second time to be detected by mtk client.
+* Reconnect The Battery And wait for the USB connection notification sound on the computer.
+* Disconnect and reconnect the battery again and it should now be detected.
 
 If you feel like you have bricked your device, its possible to listen for usb connection sounds
 if the radio keeps looping and no charging images are displayed this mean the radio is currently
