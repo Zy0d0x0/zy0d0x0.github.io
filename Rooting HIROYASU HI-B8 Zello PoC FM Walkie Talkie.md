@@ -1767,26 +1767,16 @@ Finally, there are a couple of clips holding the cover on, using a set of tweeze
 
 ## Preloader Mode ( Possibly Bricked )
 
-Please Note: In the example the instructions contain the following text:
+For a example if the boot loader is locked and a custom boot splash image was applied.
+The radio would seem to no longer boot but when plugged into a computer their are sounds from the computer where the radio is switching modes.
 
-```
-Port - Hint:
-
-Power off the phone before connecting.
-For brom mode, press and hold vol up, vol dwn, or all hw buttons and connect usb.
-For preloader mode, don't press any hw button and connect usb.
-If it is already connected and on, hold power for 10 seconds to reset.
-```
-
-This is not entirely accurate, we need to perform the following steps:
 
 * Power Off The Radio With A USB Cabled Left Plugged Into the radio and the laptop end. Remove The Battery.
 * Reconnect The Battery And wait for the USB connection notification sound on the computer.
 * Disconnect and reconnect the battery again and it should now be detected.
 
-If you feel like you have bricked your device, its possible to listen for usb connection sounds
-if the radio keeps looping and no charging images are displayed this mean the radio is currently
-it a boot loop.
+[![Example Of Preloader Mode](https://img.youtube.com/vi/_PI75gAN9Kw/0.jpg)](https://youtu.be/_PI75gAN9Kw)
+
 
 From this point it is still possible to unbrick the device with the full image backup that should of been created when starting this guide.
 
