@@ -156,7 +156,7 @@ be all the necessary requirements to get started completed.
 
 ## Map Shared Directory
 
-![](kalishared-desktop.png)
+![](kalishared-desktop.PNG)
 
 
 
