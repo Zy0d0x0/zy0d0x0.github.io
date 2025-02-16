@@ -152,7 +152,7 @@ be all the necessary requirements to get started completed.
 
 # Kali Linux Virtual Machine 
 
-Note Kali linux is not required. Any linux system with ext4 support and root permissions should work.
+Note Kali linux is not required. Any linux system with ext4 support and sudo or root permissions should work.
 
 [Kali As A Pre Made Virtual Machine](https://www.kali.org/docs/virtualization/import-premade-virtualbox/)
 
