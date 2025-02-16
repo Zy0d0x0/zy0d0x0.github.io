@@ -170,9 +170,9 @@ If it is already connected and on, hold power for 10 seconds to reset.
 
 This is not entirely accurate, we need to perform the following steps:
 
-* Power Off The Radio With A USB Cabled Left Plugged Into the radio and the laptop end. Remove The Battery.
+* Power Off The Radio With A USB Cabled Plugged Into the radio and the computer and  Remove The Battery.
 * Reconnect The Battery And wait for the USB connection notification sound on the computer.
-* Disconnect and reconnect the battery again and it should now be detected.
+* Disconnect and reconnect the battery again, the radio should now be detected.
 
 [![Example Of Preloader Mode](https://img.youtube.com/vi/_PI75gAN9Kw/0.jpg)](https://youtu.be/_PI75gAN9Kw)
 
