@@ -150,6 +150,15 @@ Finally download usbdk installer from [here](https://github.com/daynix/UsbDk/rel
 be all the necessary requirements to get started completed.
 
 
+# Kali Linux Virtual Machine 
+
+[Installing Kali As A Virtual Machine](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/)
+
+## Map Shared Directory
+
+![](kalishared-desktop.png)
+
+
 
 # Backup Full Image
 
