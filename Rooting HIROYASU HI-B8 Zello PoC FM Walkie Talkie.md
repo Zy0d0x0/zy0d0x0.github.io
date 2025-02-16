@@ -152,12 +152,17 @@ be all the necessary requirements to get started completed.
 
 # Kali Linux Virtual Machine 
 
+Note Kali linux is not required. Any linux system with ext4 support and root permissions should work.
+
 [Installing Kali As A Virtual Machine](https://www.kali.org/docs/virtualization/install-virtualbox-guest-vm/)
 
 ## Map Shared Directory
 
-![](kalishared-desktop.PNG)
+Click on the Kali Virtual Machine, before starting it up and map a share to the location MTK client folder is mapped to. 
+In the below example it was are Desktop, This then allowed us to navigate from the desktop into the MTK client directory
+as shown in the guide.
 
+![](kalishared-desktop.PNG)
 
 
 # Backup Full Image
