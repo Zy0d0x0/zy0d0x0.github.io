@@ -1593,6 +1593,8 @@ As of 13-02-2025 we are working out the best way to replace the 4g LTE boot spla
 [![Removed Boot Audio](https://img.youtube.com/vi/ImmJ6UJhMG4/0.jpg)](https://youtube.com/shorts/ImmJ6UJhMG4)
 
 
+
+
 # Additional Commands & Modes
 
 ## Boot Into Recovery Mode ( Unlocked Bootloader Required )
@@ -1773,6 +1775,29 @@ Wrote full-backup.img to sector 0 with sector count 30535680.
 
 C:\Users\Gamer\Desktop\mtkclient-main\mtkclient-main>
 ```
+
+
+
+## QRM From The Screen (Warning)
+
+QRM from the screen could make it possible for goverments and other snoopers possible to know when using the radio.
+Due to the screen leaking noise. One of the known frequencys that the radio can be heard on is 491.4
+
+This has not been tested but it might be possible to use [TempestSdr](https://github.com/martinmarinov/TempestSDR) to spy one the screen this is in current
+testing. 
+
+[![[QRM Example](https://img.youtube.com/vi/JxQKz88bmPQ)](https://www.youtube.com/shorts/JxQKz88bmPQ)
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Internals
