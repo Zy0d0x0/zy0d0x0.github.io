@@ -1786,7 +1786,7 @@ Due to the screen leaking noise. One of the known frequencys that the radio can 
 This has not been tested but it might be possible to use [TempestSdr](https://github.com/martinmarinov/TempestSDR) to spy one the screen this is in current
 testing. 
 
-[![[QRM Example](https://img.youtube.com/vi/JxQKz88bmPQ/0.jpg)](https://www.youtube.com/shorts/JxQKz88bmPQ)
+[![QRM Example](https://img.youtube.com/vi/JxQKz88bmPQ/0.jpg)](https://www.youtube.com/shorts/JxQKz88bmPQ)
 
 
 
